@@ -55,7 +55,7 @@ public class RequestResponse {
         while (enums.hasMoreElements()) {
             String paraName = enums.nextElement();
             String paraValue = RequestResponse.getRequest(request).getParameter(paraName);
-            if (null != paraValue && !"".equals(paraValue)) {
+            if (null != paraValue && !paraValue.isBlank()) {
                 dataMap.put(paraName, paraValue);
             }
         }
@@ -138,7 +138,7 @@ public class RequestResponse {
         while (enums.hasMoreElements()) {
             String name = enums.nextElement();
             String value = RequestResponse.getRequest(request).getHeader(name);
-            if (null != value && !"".equals(value)) {
+            if (null != value && !value.isBlank()) {
                 headerMap.put(name, value);
             }
         }
