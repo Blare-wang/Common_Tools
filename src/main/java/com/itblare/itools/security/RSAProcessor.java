@@ -48,9 +48,7 @@ public class RSAProcessor {
      * @param publicKeyBytes 公钥key
      * @return {@link PublicKey}
      * @method restorePublicKey
-     * @author Blare
      * @date 2021/4/17 23:55
-     * @updator Blare
      */
     public static PublicKey restorePublicKey(byte[] publicKeyBytes) {
         //Only RSAPublicKeySpec and X509EncodedKeySpec supported for RSA public keys
@@ -70,9 +68,7 @@ public class RSAProcessor {
      * @param privateKeyBytes 私钥key
      * @return {@link PrivateKey}
      * @method restorePrivateKey
-     * @author Blare
      * @date 2021/4/17 23:56
-     * @updator Blare
      */
     public static PrivateKey restorePrivateKey(byte[] privateKeyBytes) {
         //Only RSAPrivate(Crt)KeySpec and PKCS8EncodedKeySpec supported for RSA private keys
@@ -92,9 +88,7 @@ public class RSAProcessor {
      * @param publicKeyBytes 公钥key
      * @return {@link PublicKey}
      * @method restorePublicKey
-     * @author Blare
      * @date 2021/4/17 23:55
-     * @updator Blare
      */
     public static String restoreStringPublicKey(byte[] publicKeyBytes) {
         //Only RSAPublicKeySpec and X509EncodedKeySpec supported for RSA public keys
@@ -115,9 +109,7 @@ public class RSAProcessor {
      * @param privateKeyBytes 私钥key
      * @return {@link PrivateKey}
      * @method restorePrivateKey
-     * @author Blare
      * @date 2021/4/17 23:56
-     * @updator Blare
      */
     public static String restoreStringPrivateKey(byte[] privateKeyBytes) {
         //Only RSAPrivate(Crt)KeySpec and PKCS8EncodedKeySpec supported for RSA private keys
@@ -138,9 +130,7 @@ public class RSAProcessor {
      * @param keySize key大小，默认1024
      * @return {@link KeyPair}
      * @method generateKeyPair
-     * @author Blare
      * @date 2021/4/18 0:01
-     * @updator Blare
      */
     public static KeyPair generateKeyPair(Integer keySize) {
 
@@ -175,9 +165,7 @@ public class RSAProcessor {
      * @param keyPair 密钥对
      * @return {@link String}
      * @method getPublicKey
-     * @author Blare
      * @date 2021/4/18 0:36
-     * @updator Blare
      */
     public static String getPublicKey(KeyPair keyPair) {
         try {
@@ -195,9 +183,7 @@ public class RSAProcessor {
      * @param keyPair 密钥对
      * @return {@link String}
      * @method getPrivateKey
-     * @author Blare
      * @date 2021/4/18 0:34
-     * @updator Blare
      */
     public static String getPrivateKey(KeyPair keyPair) {
         try {
@@ -218,9 +204,7 @@ public class RSAProcessor {
      * @param private_key 私钥
      * @return {@link String}
      * @method sign
-     * @author Blare
      * @date 2021/4/18 0:33
-     * @updator Blare
      */
     public static String sign(String data, String private_key) throws Exception {
         // 解密由base64编码的私钥
@@ -247,9 +231,7 @@ public class RSAProcessor {
      * @param public_key 公钥
      * @return {@link boolean}
      * @method verify
-     * @author Blare
      * @date 2021/4/18 0:32
-     * @updator Blare
      */
     public static boolean verify(String data, String sign, String public_key) throws Exception {
 
@@ -279,9 +261,7 @@ public class RSAProcessor {
      * @param private_key 私钥
      * @return {@link String}
      * @method encryptByPrivateKey
-     * @author Blare
      * @date 2021/4/18 0:31
-     * @updator Blare
      */
     public static String encryptByPrivateKey(String data, String private_key) throws Exception {
         // 对密钥解密
@@ -307,9 +287,7 @@ public class RSAProcessor {
      * @param public_key 公钥
      * @return {@link String}
      * @method decryptByPublicKey
-     * @author Blare
      * @date 2021/4/18 0:31
-     * @updator Blare
      */
     public static String decryptByPublicKey(String secret, String public_key) throws Exception {
         // 对密钥解密
@@ -335,9 +313,7 @@ public class RSAProcessor {
      * @param public_key 公钥
      * @return {@link String}
      * @method encryptByPublicKey
-     * @author Blare
      * @date 2021/4/18 0:30
-     * @updator Blare
      */
     public static String encryptByPublicKey(String data, String public_key) throws Exception {
         // 对密钥解密
@@ -363,9 +339,7 @@ public class RSAProcessor {
      * @param private_key 私钥
      * @return {@link String}
      * @method decryptByPrivateKey
-     * @author Blare
      * @date 2021/4/18 0:29
-     * @updator Blare
      */
     public static String decryptByPrivateKey(String secret, String private_key) throws Exception {
         // 对密钥解密

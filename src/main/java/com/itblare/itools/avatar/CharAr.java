@@ -45,9 +45,7 @@ public class CharAr {
      * @param height       高度度
      * @param cornerRadius 圆角度
      * @method generateImg
-     * @author Blare
      * @date 2021/4/19 18:07
-     * @updator Blare
      */
     public static void outputFileImg(String charStr, Integer width, Integer height, Integer cornerRadius, File file) throws IOException {
         if (file.isDirectory()) {
@@ -65,9 +63,7 @@ public class CharAr {
      * @param charStr 字符
      * @param file    输出文件
      * @method outputFileImg
-     * @author Blare
      * @date 2021/4/19 18:24
-     * @updator Blare
      */
     public static void outputFileImg(String charStr, File file) throws IOException {
         if (file.isDirectory()) {
@@ -87,9 +83,7 @@ public class CharAr {
      * @param height       高度度
      * @param cornerRadius 圆角度
      * @method generateImg
-     * @author Blare
      * @date 2021/4/19 18:07
-     * @updator Blare
      */
     public static String outputBase64Img(String charStr, Integer width, Integer height, Integer cornerRadius) throws IOException {
         // 获取图片
@@ -108,9 +102,7 @@ public class CharAr {
      * @param charStr 字符
      * @return {@link String}
      * @method outputBase64Img
-     * @author Blare
      * @date 2021/4/19 18:26
-     * @updator Blare
      */
     public static String outputBase64Img(String charStr) throws IOException {
         // 获取图片
@@ -131,9 +123,7 @@ public class CharAr {
      * @param charStr      字符
      * @param cornerRadius 圆角度
      * @method generateImg
-     * @author Blare
      * @date 2021/4/19 17:58
-     * @updator Blare
      */
     private static BufferedImage generateImgBuffered(String charStr, Integer width, Integer height, Integer cornerRadius) {
         if (Objects.isNull(cornerRadius)) {
@@ -225,9 +215,7 @@ public class CharAr {
      * @param charStr 字符
      * @return {@link boolean}
      * @method isChinese
-     * @author Blare
      * @date 2021/4/19 18:01
-     * @updator Blare
      */
     public static boolean isChinese(String charStr) {
         String regEx = "[\\u4e00-\\u9fa5]+";
@@ -241,9 +229,7 @@ public class CharAr {
      *
      * @return {@link Color}
      * @method getRandomColor
-     * @author Blare
      * @date 2021/4/19 18:01
-     * @updator Blare
      */
     private static Color getRandomColor() {
         String[] beautifulColors = new String[] {"232,221,203", "205,179,128", "3,101,100", "3,54,73", "3,22,52",
@@ -276,9 +262,7 @@ public class CharAr {
      * @param cornerRadius 圆角度
      * @return {@link BufferedImage}
      * @method makeRoundedCorner
-     * @author Blare
      * @date 2021/4/19 18:02
-     * @updator Blare
      */
     private static BufferedImage makeRoundedCorner(BufferedImage image, int cornerRadius) {
         int w = image.getWidth();

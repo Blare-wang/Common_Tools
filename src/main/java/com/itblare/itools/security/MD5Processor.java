@@ -26,6 +26,10 @@ import java.util.Objects;
  */
 public class MD5Processor {
 
+    public static String md5Encode(String encryptedStr) {
+        return md5Encode(encryptedStr, null);
+    }
+
     /**
      * 功能描述: MD5-32位签名算法
      *
@@ -33,9 +37,7 @@ public class MD5Processor {
      * @param charset      字符集【UTF8、UTF-8、GBK、ISO-8859-1等】
      * @return {@link String}
      * @method md5Encode
-     * @author Blare
      * @date 2021/4/16 11:02
-     * @updator Blare
      */
     public static String md5Encode(String encryptedStr, String charset) {
         MessageDigest md5;

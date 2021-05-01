@@ -38,9 +38,7 @@ public class HttpIp {
      *
      * @return {@link String}
      * @method getLocalIP
-     * @author Blare
      * @date 2021/4/13 14:45
-     * @updator Blare
      */
     public static String getLocalIP() throws UnknownHostException {
         if (isWindowsOS()) {
@@ -55,9 +53,7 @@ public class HttpIp {
      *
      * @return {@link String}
      * @method getLocalHostName
-     * @author Blare
      * @date 2021/4/13 14:45
-     * @updator Blare
      */
     public static String getLocalHostName() throws UnknownHostException {
         return InetAddress.getLocalHost().getHostName();
@@ -71,9 +67,7 @@ public class HttpIp {
      * @param cidr 无类别域间路由 ip/mask 即IP+掩码
      * @return {@link boolean}
      * @method isInRange
-     * @author Blare
      * @date 2021/4/21 10:52
-     * @updator Blare
      */
     public static boolean isInRange(String ip, String cidr) {
         if (cidr == null)
@@ -110,9 +104,7 @@ public class HttpIp {
      * @param request http????
      * @return {@link String}
      * @method getIpAddress
-     * @author Blare
      * @date 2020/3/7 14:20
-     * @updator Blare
      */
     public static String getIpAddress(HttpServletRequest request) {
 
@@ -204,9 +196,7 @@ public class HttpIp {
      *
      * @return {@link boolean}
      * @method isWindowsOS
-     * @author Blare
      * @date 2020/3/7 14:14
-     * @updator Blare
      */
     private static boolean isWindowsOS() {
         boolean isWindowsOS = false;
@@ -222,9 +212,7 @@ public class HttpIp {
      *
      * @return {@link String}
      * @method getLinuxLocalIp
-     * @author Blare
      * @date 2021/4/13 14:45
-     * @updator Blare
      */
     private static String getLinuxLocalIp() {
         String ip = "";
@@ -264,9 +252,7 @@ public class HttpIp {
      * @param ipAdderss IP地址
      * @return {@link boolean}
      * @method isEmptyAddressStr
-     * @author Blare
      * @date 2021/4/21 10:43
-     * @updator Blare
      */
     private static boolean isEmptyAddressStr(String ipAdderss) {
         return (ipAdderss == null || "".equals(ipAdderss));

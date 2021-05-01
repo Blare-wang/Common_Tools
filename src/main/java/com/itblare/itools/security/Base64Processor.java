@@ -24,12 +24,10 @@ public class Base64Processor {
     /**
      * 功能描述: base64 编码
      *
-     * @method encode
      * @param data 待加密数据字节数组
      * @return {@link String}
-     * @author Blare
+     * @method encode
      * @date 2021/4/17 23:24
-     * @updator Blare
      */
     public static String encode(byte[] data) {
         return new String(java.util.Base64.getEncoder().encode(data));
@@ -38,12 +36,10 @@ public class Base64Processor {
     /**
      * 功能描述: base64 解码
      *
-     * @method decode
      * @param encodeStr 待解密字符串
      * @return {@link byte[]}
-     * @author Blare
+     * @method decode
      * @date 2021/4/17 23:24
-     * @updator Blare
      */
     public static byte[] decode(String encodeStr) {
         return java.util.Base64.getDecoder().decode(encodeStr.getBytes());

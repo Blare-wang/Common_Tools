@@ -103,9 +103,7 @@ public class ImageCapHelper {
      *
      * @return {@link char}
      * @method alphaHan
-     * @author Blare
      * @date 2021/4/24 18:28
-     * @updator Blare
      */
     public static char alphaHan() {
         return DELTA.charAt(number(DELTA.length()));
@@ -116,9 +114,7 @@ public class ImageCapHelper {
      *
      * @return {@link Color}
      * @method getCommonlyFontColor
-     * @author Blare
      * @date 2021/4/26 0:19
-     * @updator Blare
      */
     public static Color getNormalFontColor() {
         int[] color = COLOR[number(COLOR.length)];
@@ -130,9 +126,7 @@ public class ImageCapHelper {
      *
      * @return {@link Color}
      * @method generateRandomColor
-     * @author Blare
      * @date 2020/10/31 15:29
-     * @updator Blare
      */
     public static Color getRandomColor() {
         /*
@@ -149,9 +143,7 @@ public class ImageCapHelper {
      * @param size 字体大小
      * @return {@link Font}
      * @method randomFont
-     * @author Blare
      * @date 2020/10/31 17:09
-     * @updator Blare
      */
     public static Font getRandomFont(int size) {
         //获取随机的字体
@@ -187,9 +179,7 @@ public class ImageCapHelper {
      * @param interLine 数量
      * @param graphics  图形上下文Graphics对象
      * @method drawLine
-     * @author Blare
      * @date 2020/10/31 20:24
-     * @updator Blare
      */
     public void drawLine(Graphics graphics, int interLine, int width, int height) {
         drawLine(graphics, interLine, null, width, height);
@@ -204,9 +194,7 @@ public class ImageCapHelper {
      * @param width     图片宽度(注意此宽度若过小,容易造成验证码文本显示不全,如4个字符的文本可使用85到90的宽度)
      * @param height    图片高度
      * @method drawLine
-     * @author Blare
      * @date 2020/10/31 20:24
-     * @updator Blare
      */
     private static void drawLine(Graphics graphics, int interLine, Color lineColor, int width, int height) {
         int x = 0, y, y1;
@@ -224,9 +212,7 @@ public class ImageCapHelper {
      * @param interOval 数量
      * @param graphics  图形上下文Graphics对象
      * @method drawOval
-     * @author Blare
      * @date 2021/4/24 17:49
-     * @updator Blare
      */
     public static void drawOval(Graphics graphics, int interOval, int width, int height) {
         drawOval(graphics, interOval, null, width, height);
@@ -239,9 +225,7 @@ public class ImageCapHelper {
      * @param color     颜色
      * @param graphics  图形上下文Graphics对象
      * @method drawOval
-     * @author Blare
      * @date 2021/4/24 17:49
-     * @updator Blare
      */
     public static void drawOval(Graphics graphics, int interOval, Color color, int width, int height) {
         for (int i = 0; i < interOval; i++) {
@@ -257,9 +241,7 @@ public class ImageCapHelper {
      * @param num      数量
      * @param graphics 图形上下文Graphics对象
      * @method drawBesselLine
-     * @author Blare
      * @date 2021/4/24 17:50
-     * @updator Blare
      */
     public static void drawBesselLine(Graphics2D graphics, int num, int width, int height) {
         drawBesselLine(graphics, num, null, width, height);
@@ -272,9 +254,7 @@ public class ImageCapHelper {
      * @param color    颜色
      * @param graphics 图形上下文Graphics对象
      * @method drawBesselLine
-     * @author Blare
      * @date 2021/4/24 17:50
-     * @updator Blare
      */
     public static void drawBesselLine(Graphics2D graphics, int num, Color color, int width, int height) {
         for (int i = 0; i < num; i++) {
@@ -308,9 +288,7 @@ public class ImageCapHelper {
      * @param height        图片高度
      * @param noiseRate     噪率
      * @method drawNoise
-     * @author Blare
      * @date 2020/10/31 20:28
-     * @updator Blare
      */
     private static void drawNoise(BufferedImage bufferedImage, int width, int height, float noiseRate) {
         int area = (int) (noiseRate * width * height);
@@ -331,9 +309,7 @@ public class ImageCapHelper {
      * @param color     颜色
      * @param borderGap 边界绘制
      * @method shear
-     * @author Blare
      * @date 2020/10/31 20:47
-     * @updator Blare
      */
     @SuppressWarnings("SameParameterValue")
     private static void shear(Graphics graphics, int width, int height, Color color, boolean borderGap) {
@@ -349,9 +325,7 @@ public class ImageCapHelper {
      * @param height   图片高度
      * @param color    颜色
      * @method shearX
-     * @author Blare
      * @date 2020/10/31 20:48
-     * @updator Blare
      */
     private static void shearX(Graphics graphics, int width, int height, Color color, boolean borderGap) {
 
@@ -382,9 +356,7 @@ public class ImageCapHelper {
      * @param height   图片高度
      * @param color    颜色
      * @method shearY
-     * @author Blare
      * @date 2020/10/31 20:32
-     * @updator Blare
      */
     private static void shearY(Graphics graphics, int width, int height, Color color, boolean borderGap) {
 
@@ -406,15 +378,13 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 生成验证码字符串（ASCII码：0-9=>48-57，A-Z=>65-90，a-z=>97-122）
+     * 功能描述: 生成验证码字符串（ASCII码：0-9~48-57，A-Z~65-90，a-z~97-122）
      *
      * @param type   验证码类型,参见本类的静态属性
      * @param length 验证码长度,要求大于0的整数
      * @return {@link String}
      * @method generateTextCode
-     * @author Blare
      * @date 2020/10/31 15:31
-     * @updator Blare
      */
     public static String getCapCode(int type, int length) {
 
@@ -512,9 +482,7 @@ public class ImageCapHelper {
      * @param resize         宽度不够，是否重置
      * @return {@link BufferedImage}
      * @method generateImageCode
-     * @author Blare
      * @date 2021/4/26 0:10
-     * @updator Blare
      */
     public static BufferedImage generateImageCode(char[] charArr,
                                                   int width,
@@ -545,9 +513,7 @@ public class ImageCapHelper {
      * @param lineColor      干扰线颜色,若为null则表示采用随机颜色
      * @return {@link BufferedImage}
      * @method generateImageCode
-     * @author Blare
      * @date 2020/10/31 15:29
-     * @updator Blare
      */
     public static BufferedImage generateImageCode(int type,
                                                   int length,
@@ -645,9 +611,7 @@ public class ImageCapHelper {
      * @param resize         宽度不够，是否重置
      * @return {@link BufferedImage}
      * @method generateImageCode
-     * @author Blare
      * @date 2020/10/31 17:11
-     * @updator Blare
      */
     public static BufferedImage generateImageCode(char[] charArr,
                                                   int width,
@@ -738,9 +702,7 @@ public class ImageCapHelper {
      * @param resize          宽度不够，是否重置
      * @return {@link BufferedImage}
      * @method graphicsChineseImage
-     * @author Blare
      * @date 2021/4/25 0:24
-     * @updator Blare
      */
     public static BufferedImage graphicsChineseImage(char[] charArr,
                                                      int width,
@@ -834,9 +796,7 @@ public class ImageCapHelper {
      * @param resize          宽度不够，是否重置
      * @return {@link BufferedImage}
      * @method graphicsChineseImage
-     * @author Blare
      * @date 2021/4/25 0:24
-     * @updator Blare
      */
     public static BufferedImage graphicsChineseGifImage(char[] charArr,
                                                         int width,
@@ -943,9 +903,7 @@ public class ImageCapHelper {
      * @param resize         宽度不够，是否重置
      * @return {@link BufferedImage}
      * @method graphicsChineseImage
-     * @author Blare
      * @date 2021/4/25 0:24
-     * @updator Blare
      */
     public static BufferedImage graphicsGifImage(char[] charArr,
                                                  int width,
@@ -1040,9 +998,7 @@ public class ImageCapHelper {
      * @param alpha          透明度
      * @return {@link int}
      * @method draw
-     * @author Blare
      * @date 2021/4/25 0:10
-     * @updator Blare
      */
     private static int draw(Graphics2D graphics, char[] charArr, int width, int height, boolean randomLocation, Color fontColor, Integer alpha) {
         // 每一个字符所占的宽度
@@ -1080,9 +1036,7 @@ public class ImageCapHelper {
      *
      * @return {@link float}
      * @method getAlpha
-     * @author Blare
      * @date 2021/4/26 0:14
-     * @updator Blare
      */
     private static float getAlpha(int i, int j, int len) {
         int num = i + j;

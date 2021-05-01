@@ -59,9 +59,7 @@ public abstract class AbstractCaptcha {
      *
      * @return {@link char[]}
      * @method alphas
-     * @author Blare
      * @date 2021/4/24 18:02
-     * @updator Blare
      */
     protected char[] alphas() {
         return alphas(-1);
@@ -73,9 +71,7 @@ public abstract class AbstractCaptcha {
      * @param len 验证码长度
      * @return {@link char[]}
      * @method alphas
-     * @author Blare
      * @date 2021/4/24 18:01
-     * @updator Blare
      */
     protected char[] alphas(int len) {
         if (len < 1) {
@@ -92,9 +88,7 @@ public abstract class AbstractCaptcha {
      * @param os 输出流
      * @return {@link boolean}
      * @method out
-     * @author Blare
      * @date 2021/4/24 17:40
-     * @updator Blare
      */
     public abstract boolean out(OutputStream os);
 
@@ -103,9 +97,7 @@ public abstract class AbstractCaptcha {
      *
      * @return {@link String}
      * @method toBase64
-     * @author Blare
      * @date 2021/4/24 17:41
-     * @updator Blare
      */
     public abstract String toBase64();
 
@@ -115,9 +107,7 @@ public abstract class AbstractCaptcha {
      * @param type 编码头，eg：data:image/png;base64,
      * @return {@link String}
      * @method toBase64
-     * @author Blare
      * @date 2021/4/24 17:42
-     * @updator Blare
      */
     public String toBase64(String type) {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -130,9 +120,7 @@ public abstract class AbstractCaptcha {
      *
      * @return {@link String}
      * @method text
-     * @author Blare
      * @date 2021/4/24 17:45
-     * @updator Blare
      */
     public String text() {
         checkAlpha();
@@ -144,9 +132,7 @@ public abstract class AbstractCaptcha {
      *
      * @return {@link char[]}
      * @method textChar
-     * @author Blare
      * @date 2021/4/24 17:45
-     * @updator Blare
      */
     public char[] textChar() {
         checkAlpha();
@@ -157,9 +143,7 @@ public abstract class AbstractCaptcha {
      * 功能描述: 检查验证码是否生成，没有则立即生成
      *
      * @method checkAlpha
-     * @author Blare
      * @date 2021/4/24 17:45
-     * @updator Blare
      */
     public void checkAlpha() {
         if (chars == null) {
@@ -170,16 +154,14 @@ public abstract class AbstractCaptcha {
     /**
      * 功能描述: 检查验证码是否生成，没有则立即生成
      *
-     * @param lenght 指定长度
+     * @param length 指定长度
      * @method checkAlpha
-     * @author Blare
      * @date 2021/4/24 17:55
-     * @updator Blare
      */
-    public void checkAlpha(int lenght) {
-        this.length = lenght;
+    public void checkAlpha(int length) {
+        this.length = length;
         if (chars == null) {
-            alphas(lenght); // 生成验证码
+            alphas(length); // 生成验证码
         }
     }
 
@@ -190,9 +172,7 @@ public abstract class AbstractCaptcha {
      * @param besselXY 绘制立方曲线坐标
      * @return {@link GifEncoder}
      * @method createGif
-     * @author Blare
      * @date 2021/4/26 1:40
-     * @updator Blare
      */
     public GifEncoder createGif(OutputStream os, int[][] besselXY) {
         // 随机生成贝塞尔曲线参数

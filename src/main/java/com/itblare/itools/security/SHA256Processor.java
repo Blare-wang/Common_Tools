@@ -35,9 +35,7 @@ public class SHA256Processor {
      * @param filePath 文件路径
      * @return {@link String}
      * @method hash
-     * @author Blare
      * @date 2021/4/17 23:46
-     * @updator Blare
      */
     public static String hash(String filePath) {
         long start = System.currentTimeMillis();
@@ -68,9 +66,7 @@ public class SHA256Processor {
      * @param src 字节数组
      * @return {@link String}
      * @method hash
-     * @author Blare
      * @date 2021/4/17 23:46
-     * @updator Blare
      */
     public static String hash(byte[] src) {
         String strDes;
@@ -90,9 +86,7 @@ public class SHA256Processor {
      * @param bts 待处理字节数组
      * @return {@link String}
      * @method bytes2Hex
-     * @author Blare
      * @date 2021/4/17 23:46
-     * @updator Blare
      */
     private static String bytes2Hex(byte[] bts) {
         StringBuilder des = new StringBuilder();

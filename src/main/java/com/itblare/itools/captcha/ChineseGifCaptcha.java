@@ -102,9 +102,7 @@ public class ChineseGifCaptcha extends AbstractChineseCaptcha {
      * @param besselXY 干扰线参数
      * @return {@link BufferedImage}
      * @method graphicsImage
-     * @author Blare
      * @date 2021/4/24 18:40
-     * @updator Blare
      */
     private BufferedImage graphicsImage(char[] charArr, int flag, int[][] besselXY) {
         return graphicsChineseGifImage(
@@ -133,9 +131,7 @@ public class ChineseGifCaptcha extends AbstractChineseCaptcha {
      *
      * @return {@link float}
      * @method getAlpha
-     * @author Blare
      * @date 2021/4/24 18:40
-     * @updator Blare
      */
     private float getAlpha(int i, int j) {
         int num = i + j;

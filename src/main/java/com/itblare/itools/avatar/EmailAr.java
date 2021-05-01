@@ -29,9 +29,7 @@ public class EmailAr {
      * @param message 邮箱地址
      * @return {@link String}
      * @method emailToMd5
-     * @author Blare
      * @date 2021/4/19 17:53
-     * @updator Blare
      */
     public static String emailToMd5(String message) {
         String temp = "";
@@ -51,9 +49,7 @@ public class EmailAr {
      * @param bytes 字节数组
      * @return {@link String}
      * @method convertByteToHexString
-     * @author Blare
      * @date 2021/4/19 17:54
-     * @updator Blare
      */
     public static String convertByteToHexString(byte[] bytes) {
         StringBuilder result = new StringBuilder();
@@ -75,9 +71,7 @@ public class EmailAr {
      * @param email 邮箱地址
      * @return {@link String}
      * @method getGravatar
-     * @author Blare
      * @date 2021/4/19 17:54
-     * @updator Blare
      */
     public static String getGravatar(String email) {
         String emailMd5 = emailToMd5(email);

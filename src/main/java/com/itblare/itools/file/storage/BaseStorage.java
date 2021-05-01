@@ -60,9 +60,7 @@ public abstract class BaseStorage {
      * @param key  文件路径，包含文件名
      * @return {@link String} 返回http地址
      * @method upload
-     * @author Blare
      * @date 2021/4/12 14:55
-     * @updator Blare
      */
     public abstract String upload(byte[] data, String key);
 
@@ -73,9 +71,7 @@ public abstract class BaseStorage {
      * @param suffix 后缀
      * @return {@link String} 返回http地址
      * @method uploadSuffix
-     * @author Blare
      * @date 2021/4/12 14:56
-     * @updator Blare
      */
     public abstract String uploadSuffix(byte[] data, String suffix);
 
@@ -86,9 +82,7 @@ public abstract class BaseStorage {
      * @param key         文件路径，包含文件名
      * @return {@link String} 返回http地址
      * @method upload
-     * @author Blare
      * @date 2021/4/12 18:14
-     * @updator Blare
      */
     public abstract String upload(InputStream inputStream, String key);
 
@@ -99,9 +93,7 @@ public abstract class BaseStorage {
      * @param suffix      后缀
      * @return {@link String} 返回http地址
      * @method uploadSuffix
-     * @author Blare
      * @date 2021/4/12 18:14
-     * @updator Blare
      */
     public abstract String uploadSuffix(InputStream inputStream, String suffix);
 
@@ -111,9 +103,7 @@ public abstract class BaseStorage {
      * @param key 路径（包含名称）
      * @return {@link boolean}
      * @method removeFile
-     * @author Blare
      * @date 2021/4/13 10:57
-     * @updator Blare
      */
     public abstract boolean removeFile(String key);
 
@@ -123,9 +113,7 @@ public abstract class BaseStorage {
      * @param key 路径（包含名称）
      * @return {@link InputStream}
      * @method downloadFile
-     * @author Blare
      * @date 2021/4/13 10:57
-     * @updator Blare
      */
     public abstract InputStream downloadFile(String key);
 
@@ -137,9 +125,7 @@ public abstract class BaseStorage {
      * @param key     路径（包含名称）
      * @return {@link String}
      * @method saveToCloudStorage
-     * @author Blare
      * @date 2021/4/13 10:59
-     * @updator Blare
      */
     public String saveToCloudStorage(String imgUrl, String referer, String key) {
         try (InputStream is = FileProcessor.getInputStreamByUrl(imgUrl, referer)) {
@@ -159,9 +145,7 @@ public abstract class BaseStorage {
      * @param key  路径（包含名称）
      * @return {@link String}
      * @method multipartUpload
-     * @author Blare
      * @date 2021/4/13 11:00
-     * @updator Blare
      */
     public abstract String multipartUpload(File file, String key);
 
@@ -170,9 +154,7 @@ public abstract class BaseStorage {
      *
      * @method getUploadToken
      * @return {@link Map}
-     * @author Blare
      * @date 2021/4/13 15:12
-     * @updator Blare
      */
     public abstract Map<String, String> getUploadToken();
 }

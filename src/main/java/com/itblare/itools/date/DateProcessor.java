@@ -38,9 +38,7 @@ public class DateProcessor {
      * @param fmt  格式，eg：yyyy-MM-dd HH:mm:ss
      * @return {@link String}
      * @method formatTime
-     * @author Blare
      * @date 2021/4/18 14:40
-     * @updator Blare
      */
     public static String formatTime(Timestamp time, String fmt) {
         if (time == null) {
@@ -55,9 +53,7 @@ public class DateProcessor {
      *
      * @return {@link Long}
      * @method getCurrentTimeMills
-     * @author Blare
-     * @date 2021/4/18 14:41
-     * @updator Blare
+     * @date 20WW21/4/18 14:41
      */
     public static Long getCurrentTimeMills() {
         return System.currentTimeMillis();
@@ -68,9 +64,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getTime
-     * @author Blare
      * @date 2021/4/18 14:41
-     * @updator Blare
      */
     public static Timestamp getTime() {
         SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -84,9 +78,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getDateFirst
-     * @author Blare
      * @date 2021/4/18 14:41
-     * @updator Blare
      */
     public static Timestamp getDateFirst() {
         SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd 00:00:00");
@@ -100,9 +92,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getDateLast
-     * @author Blare
      * @date 2021/4/18 14:41
-     * @updator Blare
      */
     public static Timestamp getDateLast() {
         SimpleDateFormat myFormat = new SimpleDateFormat("yyyy-MM-dd 23:59:59");
@@ -116,9 +106,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getYesterdayBegin
-     * @author Blare
      * @date 2021/4/18 14:41
-     * @updator Blare
      */
     public static Timestamp getYesterdayBegin() {
         long today = getDateFirst().getTime();
@@ -133,9 +121,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getYesterdayEnd
-     * @author Blare
      * @date 2021/4/18 14:42
-     * @updator Blare
      */
     public static Timestamp getYesterdayEnd() {
         long today = getDateLast().getTime();
@@ -150,9 +136,7 @@ public class DateProcessor {
      *
      * @return {@link Date}
      * @method getDate
-     * @author Blare
      * @date 2021/4/18 14:42
-     * @updator Blare
      */
     public static Date getDate() {
         Calendar calendar = Calendar.getInstance();
@@ -165,9 +149,7 @@ public class DateProcessor {
      * @param timeString 格式时间
      * @return {@link Timestamp}
      * @method getTime
-     * @author Blare
      * @date 2021/4/18 14:42
-     * @updator Blare
      */
     public static Timestamp getTime(String timeString) {
         return Timestamp.valueOf(timeString);
@@ -180,9 +162,7 @@ public class DateProcessor {
      * @param fmt        格式，eg：yyyy-MM-dd HH:mm:ss
      * @return {@link Timestamp}
      * @method getTime
-     * @author Blare
      * @date 2021/4/18 14:43
-     * @updator Blare
      */
     public static Timestamp getTime(String timeString, String fmt) throws Exception {
         SimpleDateFormat myFormat = new SimpleDateFormat(fmt);
@@ -198,9 +178,7 @@ public class DateProcessor {
      * @param fmt  自定义格式，eg：yyyy-MM-dd HH:mm:ss
      * @return {@link String}
      * @method formatDate
-     * @author Blare
      * @date 2021/4/18 14:44
-     * @updator Blare
      */
     public static String formatDate(Date date, String fmt) {
         if (date == null) {
@@ -218,9 +196,7 @@ public class DateProcessor {
      * @param fmt           解析为格式
      * @return {@link String}
      * @method formatDate
-     * @author Blare
      * @date 2021/4/18 14:44
-     * @updator Blare
      */
     public static String formatDate(String timeString, String timeStringFmt, String fmt) throws Exception {
         SimpleDateFormat myFormat = new SimpleDateFormat(timeStringFmt);
@@ -235,9 +211,7 @@ public class DateProcessor {
      * @param timeString 时间字符串
      * @return {@link Timestamp}
      * @method getDateFirst
-     * @author Blare
      * @date 2021/4/18 14:44
-     * @updator Blare
      */
     public static Timestamp getDateFirst(String timeString) throws Exception {
 
@@ -257,9 +231,7 @@ public class DateProcessor {
      * @param timeString 时间字符串
      * @return {@link Timestamp}
      * @method getDateLast
-     * @author Blare
      * @date 2021/4/18 14:45
-     * @updator Blare
      */
     public static Timestamp getDateLast(String timeString) throws Exception {
         if (timeString == null || "".equals(timeString)) {
@@ -277,9 +249,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getMonday
-     * @author Blare
      * @date 2021/4/18 14:45
-     * @updator Blare
      */
     public static Timestamp getMonday() {
         Calendar calendar = Calendar.getInstance();
@@ -298,9 +268,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getSunday
-     * @author Blare
      * @date 2021/4/18 14:45
-     * @updator Blare
      */
     public static Timestamp getSunday() {
         Calendar calendar = Calendar.getInstance();
@@ -321,9 +289,7 @@ public class DateProcessor {
      * @param day  增加的天数
      * @return {@link Timestamp}
      * @method addDay
-     * @author Blare
      * @date 2021/4/18 14:46
-     * @updator Blare
      */
     public static Timestamp addDay(Timestamp time, Long day) {
         return new Timestamp(time.getTime() + day * 1000 * 60 * 60 * 24);
@@ -336,9 +302,7 @@ public class DateProcessor {
      * @param str2 格式 ：yyyyMMdd
      * @return {@link Integer}
      * @method compareDate
-     * @author Blare
      * @date 2021/4/18 14:46
-     * @updator Blare
      */
     public static Integer compareDate(String str1, String str2) {
         return Integer.parseInt(str1) - Integer.parseInt(str2);
@@ -351,9 +315,7 @@ public class DateProcessor {
      * @param time2 时间2
      * @return {@link Integer}
      * @method getDay
-     * @author Blare
      * @date 2021/4/18 14:46
-     * @updator Blare
      */
     public static Integer getDay(Timestamp time1, Timestamp time2) {
         long dayTime = (time1.getTime() - time2.getTime()) / (1000 * 60 * 60 * 24);
@@ -365,9 +327,7 @@ public class DateProcessor {
      *
      * @return {@link String}
      * @method getMinute
-     * @author Blare
      * @date 2021/4/18 14:47
-     * @updator Blare
      */
     public static String getMinute() {
         SimpleDateFormat myFormat = new SimpleDateFormat("yyyyMMddHHmm");
@@ -379,9 +339,7 @@ public class DateProcessor {
      *
      * @return {@link String}
      * @method getDateTime
-     * @author Blare
      * @date 2021/4/18 14:47
-     * @updator Blare
      */
     public static String getDateTime() {
         return DateProcessor.getDateTime("yyyyMMddHHmmss");
@@ -392,9 +350,7 @@ public class DateProcessor {
      *
      * @return {@link String}
      * @method getDateTimeDay
-     * @author Blare
      * @date 2021/4/18 14:47
-     * @updator Blare
      */
     public static String getDateTimeDay() {
         return DateProcessor.getDateTime("yyyyMMdd");
@@ -406,9 +362,7 @@ public class DateProcessor {
      * @param formatStyle 返回时间格式
      * @return {@link String}
      * @method getDateTime
-     * @author Blare
      * @date 2021/4/18 14:47
-     * @updator Blare
      */
     public static String getDateTime(String formatStyle) {
         if (formatStyle == null || "".equals(formatStyle)) {
@@ -424,9 +378,7 @@ public class DateProcessor {
      * @param time 待格式化时间
      * @return {@link String}
      * @method formatDateTime
-     * @author Blare
      * @date 2021/4/18 14:48
-     * @updator Blare
      */
     public static String formatDateTime(String time) throws ParseException {
         return DateProcessor.formatDateTime(time, "yyyy-MM-dd HH:mm:ss");
@@ -439,9 +391,7 @@ public class DateProcessor {
      * @param timeStr 时间格式
      * @return {@link String}
      * @method formatDateTime
-     * @author Blare
      * @date 2021/4/18 14:48
-     * @updator Blare
      */
     public static String formatDateTime(String time, String timeStr) throws ParseException {
         if (timeStr == null || "".equals(timeStr)) {
@@ -458,9 +408,7 @@ public class DateProcessor {
      * @param val 待转换时间
      * @return {@link Date}
      * @method parseToDate
-     * @author Blare
      * @date 2021/4/18 14:49
-     * @updator Blare
      */
     public static Date parseToDate(String val) throws ParseException {
         Date date = null;
@@ -483,9 +431,7 @@ public class DateProcessor {
      *
      * @return {@link Map}
      * @method getPreMonth
-     * @author Blare
      * @date 2021/4/18 14:50
-     * @updator Blare
      */
     public static Map<String, String> getPreMonth() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -519,9 +465,7 @@ public class DateProcessor {
      *
      * @return {@link String}
      * @method getNowMonth
-     * @author Blare
      * @date 2021/4/18 14:50
-     * @updator Blare
      */
     public static String getNowMonth() {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -545,9 +489,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getPreMonday
-     * @author Blare
      * @date 2021/4/18 14:51
-     * @updator Blare
      */
     public static Timestamp getPreMonday() {
         Calendar calendar = Calendar.getInstance();
@@ -570,9 +512,7 @@ public class DateProcessor {
      *
      * @return {@link Timestamp}
      * @method getPreSunday
-     * @author Blare
      * @date 2021/4/18 14:51
-     * @updator Blare
      */
     public static Timestamp getPreSunday() {
         Calendar calendar = Calendar.getInstance();
@@ -597,9 +537,7 @@ public class DateProcessor {
      * @param dateFormat 字符串日期格式
      * @return {@link String}
      * @method addDay
-     * @author Blare
      * @date 2021/4/18 14:51
-     * @updator Blare
      */
     public static String addDay(String date, int days, String dateFormat) {
         if (dateFormat == null || "".equals(dateFormat)) {
@@ -623,9 +561,7 @@ public class DateProcessor {
      * @param afterDate  结束时间
      * @return {@link Long}
      * @method getDayNum
-     * @author Blare
      * @date 2021/4/18 14:52
-     * @updator Blare
      */
     public static Long getDayNum(String beforeDate, String afterDate) {
         SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd");
@@ -648,9 +584,7 @@ public class DateProcessor {
      * @param afterDate  格式 yyyyMM
      * @return {@link int}
      * @method getMonthNum
-     * @author Blare
      * @date 2021/4/18 14:52
-     * @updator Blare
      */
     public static int getMonthNum(String beforeDate, String afterDate) {
 
@@ -676,9 +610,7 @@ public class DateProcessor {
      * @param dt 日期
      * @return {@link String}
      * @method getWeekOfDate
-     * @author Blare
      * @date 2021/4/18 14:53
-     * @updator Blare
      */
     public static String getWeekOfDate(Date dt) {
         String[] weekDays = {"7", "1", "2", "3", "4", "5", "6"};
@@ -765,9 +697,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowDate_EN
-         * @author Blare
-         * @date 2021/4/18 14:54
-         * @updator Blare
+         * @date 20W21/4/18 14:54
          */
         public static String getNowDate_EN() {
             return String.valueOf(LocalDate.now());
@@ -778,9 +708,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowTime_EN
-         * @author Blare
          * @date 2021/4/18 14:54
-         * @updator Blare
          */
         public static String getNowTime_EN() {
             return LocalDateTime.now().format(yyyyMMddHHmmss_EN);
@@ -796,11 +724,9 @@ public class DateProcessor {
         /**
          * 功能描述: 获取当前时间（yyyy年MM月dd日）
          *
-         * @return {@link }
+         * @return {@link String}
          * @method getNowTime_CN_yMdH
-         * @author Blare
          * @date 2021/4/18 14:54
-         * @updator Blare
          */
         public static String getNowTime_CN_yMdH() {
             return LocalDateTime.now().format(yyyyMMddHH_CN);
@@ -811,9 +737,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowTime_EN_yMdHm
-         * @author Blare
          * @date 2021/4/18 14:55
-         * @updator Blare
          */
         public static String getNowTime_EN_yMdHm() {
             return LocalDateTime.now().format(yyyyMMddHHmm_EN);
@@ -824,9 +748,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowTime_CN_yMdHm
-         * @author Blare
          * @date 2021/4/18 14:55
-         * @updator Blare
          */
         public static String getNowTime_CN_yMdHm() {
             return LocalDateTime.now().format(yyyyMMddHHmm_CN);
@@ -837,9 +759,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowTime_CN_HHmmss
-         * @author Blare
          * @date 2021/4/18 14:55
-         * @updator Blare
          */
         public static String getNowTime_CN_HHmmss() {
             return LocalDateTime.now().format(HHmmss_CN);
@@ -851,9 +771,7 @@ public class DateProcessor {
          * @param formatStr 日期格式：yyyy，yyyy-MM-dd，yyyy-MM-dd HH:mm:ss，HH:mm:ss
          * @return {@link String}
          * @method getTime
-         * @author Blare
          * @date 2021/4/18 14:56
-         * @updator Blare
          */
         public static String getTime(String formatStr) {
             return LocalDateTime.now().format(DateTimeFormatter.ofPattern(formatStr));
@@ -864,9 +782,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowDate_CN
-         * @author Blare
          * @date 2021/4/18 14:56
-         * @updator Blare
          */
         public static String getNowDate_CN() {
             return LocalDate.now().format(yyyyMMdd_CN);
@@ -877,9 +793,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowTime_CN
-         * @author Blare
          * @date 2021/4/18 14:56
-         * @updator Blare
          */
         public static String getNowTime_CN() {
             return LocalDateTime.now().format(yyyyMMddHHmmss_CN);
@@ -890,9 +804,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowLocalTime_shot
-         * @author Blare
          * @date 2021/4/18 14:57
-         * @updator Blare
          */
         public static String getNowLocalTime_shot() {
             return LocalDateTime.now().format(shotDate);
@@ -903,9 +815,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowLocalTime_full
-         * @author Blare
          * @date 2021/4/18 14:57
-         * @updator Blare
          */
         public static String getNowLocalTime_full() {
             return LocalDateTime.now().format(fullDate);
@@ -916,9 +826,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowLocalTime_long
-         * @author Blare
          * @date 2021/4/18 14:57
-         * @updator Blare
          */
         public static String getNowLocalTime_long() {
             return LocalDateTime.now().format(longDate);
@@ -929,9 +837,7 @@ public class DateProcessor {
          *
          * @return {@link String}
          * @method getNowLocalTime_medium
-         * @author Blare
          * @date 2021/4/18 14:57
-         * @updator Blare
          */
         public static String getNowLocalTime_medium() {
             return LocalDateTime.now().format(mediumDate);
@@ -943,9 +849,7 @@ public class DateProcessor {
          * @param node 日期中的节点元素（年，月，周，日，时，分，秒）
          * @return {@link Integer}
          * @method getNodeTime
-         * @author Blare
          * @date 2021/4/18 14:57
-         * @updator Blare
          */
         public static Integer getNodeTime(String node) {
             LocalDateTime today = LocalDateTime.now();
@@ -986,9 +890,7 @@ public class DateProcessor {
          * @param enWeek 英文星期
          * @return {@link int}
          * @method transformWeekEN2Num
-         * @author Blare
          * @date 2021/4/18 14:58
-         * @updator Blare
          */
         public static int transformWeekEN2Num(String enWeek) {
             if (MONDAY.equals(enWeek)) {
@@ -1021,9 +923,7 @@ public class DateProcessor {
          * @param num  第几天（+：之后，-：之前）
          * @return {@link String}
          * @method getAfterOrPreNowTime
-         * @author Blare
          * @date 2021/4/18 14:58
-         * @updator Blare
          */
         public static String getAfterOrPreNowTime(String node, Long num) {
             return getString(node, num, yyyyMMddHHmmss_EN);
@@ -1037,9 +937,7 @@ public class DateProcessor {
          * @param yyyyMMddHHmmss_en 返回格式
          * @return {@link String}
          * @method getString
-         * @author Blare
          * @date 2021/4/18 14:59
-         * @updator Blare
          */
         private static String getString(String node, Long num, DateTimeFormatter yyyyMMddHHmmss_en) {
             LocalDateTime now = LocalDateTime.now();
@@ -1074,9 +972,7 @@ public class DateProcessor {
          * @param num  （+：之后，-：之前）
          * @return {@link String}
          * @method getAfterOrPreNowTimePlus
-         * @author Blare
          * @date 2021/4/18 15:00
-         * @updator Blare
          */
         public static String getAfterOrPreNowTimePlus(DateTimeFormatter dtf, String node, Long num) {
             return getString(node, num, dtf);
@@ -1089,9 +985,7 @@ public class DateProcessor {
          * @param num  之后（之后）多久时，分，秒（+：之后，-：之前）
          * @return {@link String}
          * @method getAfterOrPreNowTimeSimp
-         * @author Blare
          * @date 2021/4/18 15:01
-         * @updator Blare
          */
         public static String getAfterOrPreNowTimeSimp(String node, Long num) {
             LocalTime now = LocalTime.now();
@@ -1113,9 +1007,7 @@ public class DateProcessor {
          * @param dayOfMonth 天号
          * @return {@link boolean}
          * @method isBirthday
-         * @author Blare
          * @date 2021/4/18 15:02
-         * @updator Blare
          */
         public static boolean isBirthday(int month, int dayOfMonth) {
             MonthDay birthDay = MonthDay.of(month, dayOfMonth);
@@ -1129,9 +1021,7 @@ public class DateProcessor {
          * @param index 第index天
          * @return {@link String}
          * @method getAfterOrPreDayDate
-         * @author Blare
          * @date 2021/4/18 15:02
-         * @updator Blare
          */
         public static String getAfterOrPreDayDate(int index) {
             return LocalDate.now().plus(index, ChronoUnit.DAYS).format(yyyyMMdd_EN);
@@ -1143,9 +1033,7 @@ public class DateProcessor {
          * @param index 第index周（+：之后，-：之前）
          * @return {@link String}
          * @method getAfterOrPreWeekDate
-         * @author Blare
          * @date 2021/4/18 15:02
-         * @updator Blare
          */
         public static String getAfterOrPreWeekDate(int index) {
             return LocalDate.now().plus(index, ChronoUnit.WEEKS).format(yyyyMMdd_EN);
@@ -1157,9 +1045,7 @@ public class DateProcessor {
          * @param index 第index月（+：之后，-：之前）
          * @return {@link String}
          * @method getAfterOrPreMonthDate
-         * @author Blare
          * @date 2021/4/18 15:03
-         * @updator Blare
          */
         public static String getAfterOrPreMonthDate(int index) {
             return LocalDate.now().plus(index, ChronoUnit.MONTHS).format(yyyyMMdd_EN);
@@ -1171,9 +1057,7 @@ public class DateProcessor {
          * @param index 第index年（+：之后，-：之前）
          * @return {@link String}
          * @method getAfterOrPreYearDate
-         * @author Blare
          * @date 2021/4/18 15:03
-         * @updator Blare
          */
         public static String getAfterOrPreYearDate(int index) {
             return LocalDate.now().plus(index, ChronoUnit.YEARS).format(yyyyMMdd_EN);
@@ -1187,9 +1071,7 @@ public class DateProcessor {
          * @param index 之前之后第index个日期
          * @return {@link String}
          * @method getAfterOrPreDate
-         * @author Blare
          * @date 2021/4/18 15:03
-         * @updator Blare
          */
         public static String getAfterOrPreDate(String date, String node, int index) {
             date = date.trim();
@@ -1212,9 +1094,7 @@ public class DateProcessor {
          * @param date 日期格式：yyyy-MM-dd
          * @return {@link boolean}
          * @method isLeapYear
-         * @author Blare
          * @date 2021/4/18 15:04
-         * @updator Blare
          */
         public static boolean isLeapYear(String date) {
             return LocalDate.parse(date.trim()).isLeapYear();
@@ -1228,9 +1108,7 @@ public class DateProcessor {
          * @param node  三者之一:(day，month,year)
          * @return {@link int}
          * @method peridCount
-         * @author Blare
          * @date 2021/4/18 15:04
-         * @updator Blare
          */
         public static int peridCount(String date1, String date2, String node) {
             date1 = date1.trim();
@@ -1262,9 +1140,7 @@ public class DateProcessor {
          * @param period    周期（天，周，月，年）
          * @return {@link List<String>}
          * @method getPieDateRange
-         * @author Blare
          * @date 2021/4/18 15:05
-         * @updator Blare
          */
         public static List<String> getPieDateRange(String startDate, String endDate, String period) {
             List<String> result = new ArrayList<>();
@@ -1323,9 +1199,7 @@ public class DateProcessor {
          * @param firstOrLast true：第一天，false：最后一天
          * @return {@link String}
          * @method getLastDayOfMonth
-         * @author Blare
          * @date 2021/4/18 15:06
-         * @updator Blare
          */
         public static String getLastDayOfMonth(String curDate, boolean firstOrLast) {
             if (firstOrLast) {
@@ -1342,9 +1216,7 @@ public class DateProcessor {
          * @param firstOrLast true:第一天，false:最后一天
          * @return {@link String}
          * @method getLastDayOfYear
-         * @author Blare
          * @date 2021/4/18 15:06
-         * @updator Blare
          */
         public static String getLastDayOfYear(String curDate, boolean firstOrLast) {
             if (firstOrLast) {
@@ -1362,9 +1234,7 @@ public class DateProcessor {
          * @param isContainCurDay 是否包含当天，true：是，false：不包含
          * @return {@link String}
          * @method getNextWeekDate
-         * @author Blare
          * @date 2021/4/18 15:06
-         * @updator Blare
          */
         public static String getNextWeekDate(String curDay, int dayOfWeek, boolean isContainCurDay) {
             dayOfWeek = dayOfWeek < 1 || dayOfWeek > 7 ? 1 : dayOfWeek;
@@ -1383,9 +1253,7 @@ public class DateProcessor {
          * @param isCurDay  是否包含当天，true：是，false：不包含
          * @return {@link String}
          * @method getPreWeekDate
-         * @author Blare
          * @date 2021/4/18 15:07
-         * @updator Blare
          */
         public static String getPreWeekDate(String curDay, int dayOfWeek, boolean isCurDay) {
             dayOfWeek = dayOfWeek < 1 || dayOfWeek > 7 ? 1 : dayOfWeek;
@@ -1404,9 +1272,7 @@ public class DateProcessor {
          * @param lastOrFirst true：最后一个，false本月第一个
          * @return {@link String}
          * @method getFirstOrLastWeekDate
-         * @author Blare
          * @date 2021/4/18 15:07
-         * @updator Blare
          */
         public static String getFirstOrLastWeekDate(String curDay, int dayOfWeek, boolean lastOrFirst) {
             dayOfWeek = dayOfWeek < 1 || dayOfWeek > 7 ? 1 : dayOfWeek;

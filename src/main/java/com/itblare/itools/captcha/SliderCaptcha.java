@@ -92,9 +92,7 @@ public class SliderCaptcha {
      * @param targetFile   目标原图片
      * @return {@link Map}
      * @method pictureTemplatesCut
-     * @author Blare
      * @date 2020/10/31 20:58
-     * @updator Blare
      */
     public static Map<String, Object> pictureTemplatesCut(File templateFile, File targetFile) throws Exception {
         return pictureTemplatesCut(templateFile, targetFile, false);
@@ -108,9 +106,7 @@ public class SliderCaptcha {
      * @param gaussianBlur 高斯模糊处理
      * @return {@link Map}
      * @method pictureTemplatesCut
-     * @author Blare
      * @date 2020/10/31 20:58
-     * @updator Blare
      */
     public static Map<String, Object> pictureTemplatesCut(File templateFile, File targetFile, boolean gaussianBlur) throws Exception {
         Map<String, Object> pictureMap = new HashMap<>();
@@ -193,9 +189,7 @@ public class SliderCaptcha {
      * @param rx        背景图X相对位置
      * @param ry        背景图Y相对位置
      * @method addWatermark
-     * @author Blare
      * @date 2020/10/31 22:01
-     * @updator Blare
      */
     @SuppressWarnings("SameParameterValue")
     private static void addWatermark(BufferedImage oriImage, String watermark, float rx, float ry) {
@@ -222,9 +216,7 @@ public class SliderCaptcha {
      * @param y             随机扣取坐标y
      * @param gaussianBlur  高斯模糊
      * @method cutByTemplate
-     * @author Blare
      * @date 2020/10/31 21:44
-     * @updator Blare
      */
     private static void cutByTemplate(BufferedImage oriImage, BufferedImage templateImage, BufferedImage newImage, int x, int y, boolean gaussianBlur) {
         // 临时数组遍历用于高斯模糊存周边像素值
@@ -284,16 +276,14 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 读取原图指定像素点的RGB值-> 图像像素矩阵
+     * 功能描述: 读取原图指定像素点的RGB值L: 图像像素矩阵
      *
      * @param img    原图
      * @param x      随机扣取坐标X
      * @param y      随机扣取坐标y
      * @param pixels 像素点的RGB值数组
      * @method readPixel
-     * @author Blare
      * @date 2020/10/31 23:07
-     * @updator Blare
      */
     private static void readPixel(BufferedImage img, int x, int y, int[] pixels) {
         int xStart = x - shu;
@@ -325,9 +315,7 @@ public class SliderCaptcha {
      * @param matrix 矩阵
      * @param values 像素点的RGB值数组
      * @method fillMatrix
-     * @author Blare
      * @date 2020/11/1 1:28
-     * @updator Blare
      */
     private static void fillMatrix(int[][] matrix, int[] values) {
         int filled = 0;
@@ -344,9 +332,7 @@ public class SliderCaptcha {
      * @param matrix 矩阵
      * @return {@link int}
      * @method avgMatrix
-     * @author Blare
      * @date 2020/10/31 23:22
-     * @updator Blare
      */
     private static int avgMatrix(int[][] matrix) {
         int r = 0;
@@ -376,9 +362,7 @@ public class SliderCaptcha {
      * @param matrix 矩阵
      * @return {@link int}
      * @method avgMatrixWithWeight
-     * @author Blare
      * @date 2020/10/31 23:22
-     * @updator Blare
      */
     private static int avgMatrixWithWeight(int[][] matrix, float[][] weightMatrix) {
         int r = 0;
@@ -406,10 +390,9 @@ public class SliderCaptcha {
      * @param sigma 高斯函数的σ值
      * @return {@link float[][]}
      * @method getWeightMatrix
-     * @author Blare
      * @date 2020/11/1 1:28
-     * @updator Blare
      */
+    @SuppressWarnings("SameParameterValue")
     private static float[][] getWeightMatrix(int n, float sigma) {
         // 数组大小
         int size = 2 * n + 1;
@@ -437,9 +420,7 @@ public class SliderCaptcha {
      * @param weightMatrix 权重矩阵
      * @return {@link float}
      * @method getSumWeight
-     * @author Blare
      * @date 2020/11/1 1:54
-     * @updator Blare
      */
     private static float getSumWeight(float[][] weightMatrix) {
         float sum = 0;
@@ -459,9 +440,7 @@ public class SliderCaptcha {
      * @param sum        总值
      * @return {@link float[][]}
      * @method getMeanWeightMatrix
-     * @author Blare
      * @date 2020/11/1 15:11
-     * @updator Blare
      */
     private static float[][] getMeanWeightMatrix(float[][] kernalData, float sum) {
         for (int i = 0; i < kernalData.length; i++) {
@@ -478,9 +457,7 @@ public class SliderCaptcha {
      * @param src 字节数组
      * @return {@link String}
      * @method encodeToString
-     * @author Blare
      * @date 2021/1/27 10:48
-     * @updator Blare
      */
     private static String encodeToString(byte[] src) {
         if (src.length == 0)
@@ -494,9 +471,7 @@ public class SliderCaptcha {
      * @param src Base64字符串
      * @return {@link byte[]}
      * @method decodeFromString
-     * @author Blare
      * @date 2021/1/27 10:49
-     * @updator Blare
      */
     private static byte[] decodeFromString(String src) {
         if (src.isEmpty())

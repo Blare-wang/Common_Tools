@@ -41,9 +41,7 @@ public class FileProcessor {
      * @param suffix 后缀
      * @return {@link String} 返回拼接路径
      * @method getPath
-     * @author Blare
      * @date 2021/4/13 9:29
-     * @updator Blare
      */
     public static String getPath(String prefix, String suffix) {
         //文件路径
@@ -61,9 +59,7 @@ public class FileProcessor {
      * @param fileName 文件名
      * @return {@link String} 返回文件后缀
      * @method getSuffix
-     * @author Blare
      * @date 2021/4/13 9:30
-     * @updator Blare
      */
     public static String getSuffix(String fileName) {
         int index = fileName.lastIndexOf(".");
@@ -77,9 +73,7 @@ public class FileProcessor {
      * @param fileName 文件名
      * @return {@link String} 返回文件后缀
      * @method getSuffix
-     * @author Blare
      * @date 2021/4/13 9:30
-     * @updator Blare
      */
     public static String getSuffixToUpperCase(String fileName) {
         return getSuffix(fileName).toUpperCase();
@@ -91,9 +85,7 @@ public class FileProcessor {
      * @param fileName 文件名
      * @return {@link String} 返回文件前缀
      * @method getPrefix
-     * @author Blare
      * @date 2021/4/13 9:34
-     * @updator Blare
      */
     public static String getPrefix(String fileName) {
         int idx = fileName.lastIndexOf(".");
@@ -110,9 +102,7 @@ public class FileProcessor {
      * @param referer referer验证，不加referer可能会403
      * @return {@link InputStream}
      * @method getInputStreamByUrl
-     * @author Blare
      * @date 2021/4/13 9:51
-     * @updator Blare
      */
     public static InputStream getInputStreamByUrl(String url, String referer) {
         HttpGet httpGet = new HttpGet(checkUrl(url));
@@ -121,20 +111,18 @@ public class FileProcessor {
             httpGet.setHeader("referer", referer);
         }
         CloseableHttpClient httpclient = HttpClients.createDefault();
-        CloseableHttpResponse response = null;
-        InputStream in = null;
+        CloseableHttpResponse response;
+        InputStream in;
         try {
             response = httpclient.execute(httpGet);
             in = response.getEntity().getContent();
             if (response.getStatusLine().getStatusCode() == 200) {
                 return in;
-            } else {
-                return null;
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return in;
+        return null;
     }
 
     /**
@@ -143,9 +131,7 @@ public class FileProcessor {
      * @param url URL连接
      * @return {@link String}
      * @method checkUrl
-     * @author Blare
      * @date 2021/4/13 9:50
-     * @updator Blare
      */
     private static String checkUrl(String url) {
         if (Objects.isNull(url) || "".equals(url)) {
@@ -161,24 +147,24 @@ public class FileProcessor {
     /**
      * 功能描述: 根据byte数组，生成文件
      *
-     * @method getFile
-     * @param bfile byte字节流
+     * @param bfile    byte字节流
      * @param filePath 文件存放目录
      * @param fileName 文件名称(不带后缀的)
      * @return {@link String}
-     * @author Blare
+     * @method getFile
      * @date 2021/4/13 16:02
-     * @updator Blare
      */
-    public String getFile(byte[] bfile, String filePath,String fileName) {
+    public String getFile(byte[] bfile, String filePath, String fileName) {
         BufferedOutputStream bos = null;
         FileOutputStream fos = null;
-        File file = null;
-        String path = "";
+        File file;
+        String path;
         try {
             File dir = new File(filePath);
-            if(!dir.exists()&&!dir.isDirectory()){//判断文件目录是否存在
-                dir.mkdirs();
+            if (!dir.exists() && !dir.isDirectory()) {//判断文件目录是否存在
+                if (dir.mkdirs()) {
+                    System.out.println("判断文件目录,进行创建完成。");
+                }
             }
             //创建临时文件的api参数 (文件前缀,文件后缀,存放目录)
             file = File.createTempFile(fileName, "IMG_SUFFIX", dir);
@@ -213,19 +199,17 @@ public class FileProcessor {
     /**
      * 功能描述: 读取字节输入流内容
      *
-     * @method readInputStream
      * @param is 文件流
      * @return {@link byte[]}
-     * @author Blare
+     * @method readInputStream
      * @date 2021/4/13 16:32
-     * @updator Blare
      */
     private static byte[] readInputStream(InputStream is) {
         ByteArrayOutputStream writer = new ByteArrayOutputStream();
         byte[] buff = new byte[1024 * 2];
-        int len = 0;
+        int len;
         try {
-            while((len = is.read(buff)) != -1) {
+            while ((len = is.read(buff)) != -1) {
                 writer.write(buff, 0, len);
             }
             is.close();
@@ -238,12 +222,10 @@ public class FileProcessor {
     /**
      * 功能描述: 根据文件大小，获取格式化文件描述
      *
-     * @method getFormattedSize
      * @param size 文件大小
      * @return {@link String}
-     * @author Blare
+     * @method getFormattedSize
      * @date 2021/4/17 23:34
-     * @updator Blare
      */
     public static String getFormattedSize(long size) {
         DecimalFormat df = new DecimalFormat("#.00");

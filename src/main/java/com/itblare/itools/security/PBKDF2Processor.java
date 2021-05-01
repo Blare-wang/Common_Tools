@@ -55,9 +55,7 @@ public class PBKDF2Processor {
      * @param key      原密文
      * @return {@link boolean}
      * @method verify
-     * @author Blare
      * @date 2021/4/19 17:22
-     * @updator Blare
      */
     public static boolean verify(String password, String salt, String key)
         throws NoSuchAlgorithmException, InvalidKeySpecException, DecoderException {
@@ -74,9 +72,7 @@ public class PBKDF2Processor {
      * @param salt     盐
      * @return {@link String}
      * @method getPBKDF2
-     * @author Blare
      * @date 2021/4/19 17:23
-     * @updator Blare
      */
     public static String getPBKDF2(String password, String salt) throws NoSuchAlgorithmException,
         InvalidKeySpecException, DecoderException {
@@ -94,9 +90,7 @@ public class PBKDF2Processor {
      *
      * @return {@link String}
      * @method getSalt
-     * @author Blare
      * @date 2021/4/19 17:23
-     * @updator Blare
      */
     public static String getSalt() throws NoSuchAlgorithmException {
         SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");

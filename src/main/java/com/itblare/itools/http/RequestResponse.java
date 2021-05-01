@@ -45,9 +45,7 @@ public class RequestResponse {
      * @param request HTTP请求
      * @return {@link Map}
      * @method getRequestParameters
-     * @author Blare
      * @date 2021/4/13 17:33
-     * @updator Blare
      */
     public static Map<String, String> getRequestParameters(ServletRequest request) {
         Map<String, String> dataMap = new HashMap<>(16);
@@ -68,9 +66,7 @@ public class RequestResponse {
      * @param request HTTP请求
      * @return {@link Map}
      * @method getRequestBodyMap
-     * @author Blare
      * @date 2021/4/13 17:31
-     * @updator Blare
      */
     public static Map<String, String> getRequestBodyMap(ServletRequest request) {
         Map<String, String> dataMap = new HashMap<>(16);
@@ -99,9 +95,7 @@ public class RequestResponse {
      * @param key     参数键值
      * @return {@link String}
      * @method getParameter
-     * @author Blare
      * @date 2021/4/13 17:30
-     * @updator Blare
      */
     public static String getParameter(ServletRequest request, String key) {
         return RequestResponse.getRequest(request).getParameter(key);
@@ -114,9 +108,7 @@ public class RequestResponse {
      * @param key     请求头键值
      * @return {@link String}
      * @method getHeader
-     * @author Blare
      * @date 2021/4/13 17:28
-     * @updator Blare
      */
     public static String getHeader(ServletRequest request, String key) {
         return RequestResponse.getRequest(request).getHeader(key);
@@ -128,9 +120,7 @@ public class RequestResponse {
      * @param request HTTP 请求
      * @return {@link Map}
      * @method getRequestHeaders
-     * @author Blare
      * @date 2021/4/13 17:27
-     * @updator Blare
      */
     public static Map<String, String> getRequestHeaders(ServletRequest request) {
         Map<String, String> headerMap = new HashMap<>(16);
@@ -146,14 +136,12 @@ public class RequestResponse {
     }
 
     /**
-     * 功能描述: 获取HTTP请求封装对象->自定义封装
+     * 功能描述: 获取HTTP请求封装对象:自定义封装
      *
      * @param request HTTP请求
      * @return {@link HttpServletRequest}
      * @method getRequest
-     * @author Blare
      * @date 2021/4/13 17:26
-     * @updator Blare
      */
     public static HttpServletRequest getRequest(ServletRequest request) {
         return new HttpServletRequestWrapper((HttpServletRequest) request);
@@ -166,9 +154,7 @@ public class RequestResponse {
      * @param outStr   输出结果
      * @param response HTTP响应对象
      * @method responseWrite
-     * @author Blare
      * @date 2021/4/13 17:24
-     * @updator Blare
      */
     public static void responseWrite(String outStr, ServletResponse response) {
 

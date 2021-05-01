@@ -85,9 +85,7 @@ public class ChineseCaptcha extends AbstractChineseCaptcha {
      * @param out     输出流
      * @return {@link boolean}
      * @method graphicsImage
-     * @author Blare
      * @date 2021/4/24 18:34
-     * @updator Blare
      */
     private boolean graphicsImage(char[] charArr, OutputStream out) {
         try {

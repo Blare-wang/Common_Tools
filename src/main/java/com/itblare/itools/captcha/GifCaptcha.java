@@ -103,9 +103,7 @@ public class GifCaptcha extends AbstractCaptcha {
      * @param besselXY  干扰线参数
      * @return {@link BufferedImage}
      * @method graphicsImage
-     * @author Blare
      * @date 2021/4/24 18:54
-     * @updator Blare
      */
     private BufferedImage graphicsImage(Color[] fontColor, char[] charArr, int flag, int[][] besselXY) {
 
@@ -132,9 +130,7 @@ public class GifCaptcha extends AbstractCaptcha {
      *
      * @return {@link float}
      * @method getAlpha
-     * @author Blare
      * @date 2021/4/24 18:54
-     * @updator Blare
      */
     private float getAlpha(int i, int j) {
         int num = i + j;

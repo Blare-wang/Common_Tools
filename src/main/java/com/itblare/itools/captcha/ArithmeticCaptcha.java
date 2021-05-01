@@ -112,13 +112,11 @@ public class ArithmeticCaptcha extends AbstractCaptcha {
     /**
      * 功能描述: 生成验证码图片
      *
-     * @param strs ？？
+     * @param strs 待绘制字符串
      * @param out  验证码输出流
      * @return {@link boolean}
      * @method graphicsImage
-     * @author Blare
      * @date 2021/4/24 18:06
-     * @updator Blare
      */
     private boolean graphicsImage(char[] strs, OutputStream out) {
         try {

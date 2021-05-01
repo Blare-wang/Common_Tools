@@ -26,9 +26,7 @@ public interface IMessage {
      *
      * @return {@link String}
      * @method getCode
-     * @author Blare
      * @date 2021/4/16 10:32
-     * @updator Blare
      */
     String getCode();
 
@@ -37,9 +35,7 @@ public interface IMessage {
      *
      * @return {@link String}
      * @method getMeg
-     * @author Blare
      * @date 2021/4/16 10:33
-     * @updator Blare
      */
     String getMeg();
 }

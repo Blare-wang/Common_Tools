@@ -84,9 +84,7 @@ public class RandomsProcessor {
      * @param max 最大值
      * @return {@link int}
      * @method number
-     * @author Blare
      * @date 2021/4/24 17:19
-     * @updator Blare
      */
     public static int number(int min, int max) {
         return min + RANDOM.nextInt(max - min);
@@ -98,9 +96,7 @@ public class RandomsProcessor {
      * @param num 最大值
      * @return {@link int}
      * @method number
-     * @author Blare
      * @date 2021/4/24 17:20
-     * @updator Blare
      */
     public static int number(int num) {
         return RANDOM.nextInt(num);
@@ -111,9 +107,7 @@ public class RandomsProcessor {
      *
      * @return {@link char}
      * @method alpha
-     * @author Blare
      * @date 2021/4/24 17:23
-     * @updator Blare
      */
     public static char alpha() {
         return ALPHA[number(alphaLength)];
@@ -123,11 +117,9 @@ public class RandomsProcessor {
      * 功能描述: 获取ALPHA中第0位到第num位的随机字符
      *
      * @param number 到第几位结束
-     * @return {@link }
+     * @return {@link char}
      * @method
-     * @author Blare
      * @date 2021/4/24 17:23
-     * @updator Blare
      */
     public static char alpha(int number) {
         return ALPHA[number(number)];
@@ -140,9 +132,7 @@ public class RandomsProcessor {
      * @param max 到第几位结束
      * @return {@link char}
      * @method alpha
-     * @author Blare
      * @date 2021/4/24 17:24
-     * @updator Blare
      */
     public static char alpha(int min, int max) {
         return ALPHA[number(min, max)];

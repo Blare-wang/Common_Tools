@@ -26,9 +26,7 @@ public interface XmlInfo {
      *
      * @method getCode
      * @return {@link String}
-     * @author Blare
      * @date 2021/4/16 10:31
-     * @updator Blare
      */
     String getCode();
 
@@ -37,9 +35,7 @@ public interface XmlInfo {
      *
      * @method getMessage
      * @return {@link String}
-     * @author Blare
      * @date 2021/4/16 10:32
-     * @updator Blare
      */
     String getMessage();
 }

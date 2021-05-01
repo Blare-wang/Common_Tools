@@ -13,6 +13,7 @@ package com.itblare.itools.http;
  */
 
 import okhttp3.*;
+import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +21,9 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+import java.io.*;
+import java.nio.channels.Channels;
+import java.nio.channels.ReadableByteChannel;
 import java.nio.charset.StandardCharsets;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -120,13 +124,17 @@ public class OkHttpClient {
     }
 
     /**
-     * get
+     * 功能描述: OkHttp3 GET请求
      *
-     * @param url    请求的url
-     * @param params 请求的参数，在浏览器？后面的数据，没有可以传null
-     * @return str 响应结果
+     * @param okHttpClient OkHttp3 自定义请求客户端
+     * @param url          请求的url
+     * @param params       请求的参数，在浏览器？后面的数据，没有可以传null
+     * @param headers      请求头
+     * @return {@link Response}
+     * @method doGet
+     * @date 2021/4/26 16:58
      */
-    public static String doGet(String url, Map<String, String> params, Map<String, String> headers) {
+    public static Response doGet(okhttp3.OkHttpClient okHttpClient, String url, Map<String, String> params, Map<String, String> headers) {
         StringBuilder sb = new StringBuilder(url);
         if (params != null && params.keySet().size() > 0) {
             boolean firstFlag = true;
@@ -140,15 +148,34 @@ public class OkHttpClient {
             }
         }
         final Request.Builder builder = new Request.Builder()
-            .url(sb.toString());
-        if (Objects.nonNull(headers) && headers.size() > 0) {
-            headers.forEach(builder::addHeader);
+            .url(sb.toString())
+            .headers(Objects.isNull(headers) ? new Headers.Builder().build() : Headers.of(headers))
+            .get();
+        try {
+            return okHttpClient.newCall(builder.build()).execute();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return respStr(builder.build());
+        return null;
     }
 
+    //默认OkHttp3客户端
+    public static Response doGet(String url, Map<String, String> params, Map<String, String> headers) {
+        return doGet(okHttpClient, url, params, headers);
+    }
 
-    public static String doFromPost(String url, Map<String, String> params, Map<String, String> headers) {
+    /**
+     * 功能描述: OkHttp3 From 表单POST请求
+     *
+     * @param okHttpClient OkHttp3 自定义请求客户端
+     * @param url          请求的url
+     * @param params       请求的参数，在浏览器？后面的数据，没有可以传null
+     * @param headers      请求头
+     * @return {@link Response}
+     * @method doFromPost
+     * @date 2021/4/26 17:04
+     */
+    public static Response doFromPost(okhttp3.OkHttpClient okHttpClient, String url, Map<String, String> params, Map<String, String> headers) {
         FormBody.Builder formBuilder = new FormBody.Builder(StandardCharsets.UTF_8);
         //添加参数
         if (params != null && params.keySet().size() > 0) {
@@ -158,66 +185,137 @@ public class OkHttpClient {
         }
         final Request.Builder builder = new Request.Builder()
             .url(url)
+            .headers(Objects.isNull(headers) ? new Headers.Builder().build() : Headers.of(headers))
             .post(formBuilder.build());
-        if (Objects.nonNull(headers) && headers.size() > 0) {
-            headers.forEach(builder::addHeader);
+        try {
+            return okHttpClient.newCall(builder.build()).execute();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return respStr(builder.build());
+        return null;
     }
 
-
-    public static String doJsonPost(String url, String jsonParams, Map<String, String> headers) {
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), jsonParams);
-        final Request.Builder builder = new Request.Builder().url(url).post(requestBody);
-        if (Objects.nonNull(headers) && headers.size() > 0) {
-            headers.forEach(builder::addHeader);
-        }
-        return respStr(builder.build());
+    // 默认OkHttp3客户端
+    public static Response doFromPost(String url, Map<String, String> params, Map<String, String> headers) {
+        return doFromPost(okHttpClient, url, params, headers);
     }
 
     /**
-     * 功能描述: xml 信息发送
+     * 功能描述: OkHttp3 JSON信息POST请求
      *
-     * @param url     请求url
-     * @param xml     xml信息
-     * @param headers 请求头信息，可为空
+     * @param okHttpClient OkHttp3 自定义请求客户端
+     * @param url          请求的url
+     * @param jsonParams   请求的参数，在浏览器？后面的数据，没有可以传null
+     * @param headers      请求头
+     * @return {@link Response}
+     * @method doJsonPost
+     * @date 2021/4/26 17:05
+     */
+    public static Response doJsonPost(okhttp3.OkHttpClient okHttpClient, String url, String jsonParams, Map<String, String> headers) {
+        RequestBody requestBody = RequestBody.create(jsonParams, MediaType.parse("application/json; charset=utf-8"));
+        return getResponse(okHttpClient, url, headers, requestBody);
+    }
+
+    // 默认OkHttp3客户端
+    public static Response doJsonPost(String url, String jsonParams, Map<String, String> headers) {
+        return doJsonPost(okHttpClient, url, jsonParams, headers);
+    }
+
+    /**
+     * 功能描述: OkHttp3 xml信息POST请求
+     *
+     * @param okHttpClient OkHttp3 自定义请求客户端
+     * @param url          请求url
+     * @param xml          xml信息
+     * @param headers      请求头信息，可为空
      * @return {@link String}
      * @method doXmlPost
-     * @author Blare
      * @date 2021/4/1515:03
-     * @updator Blare
      */
-    public static String doXmlPost(String url, String xml, Map<String, String> headers) {
-        RequestBody requestBody = RequestBody.create(MediaType.parse("application/xml; charset=utf-8"), xml);
-        final Request.Builder builder = new Request.Builder().url(url).post(requestBody);
+    public static Response doXmlPost(okhttp3.OkHttpClient okHttpClient, String url, String xml, Map<String, String> headers) {
+        RequestBody requestBody = RequestBody.create(xml, MediaType.parse("application/xml; charset=utf-8"));
+        return getResponse(okHttpClient, url, headers, requestBody);
+    }
+
+    // 默认OkHttp3客户端
+    public static Response doXmlPost(String url, String xml, Map<String, String> headers) {
+        return doXmlPost(okHttpClient, url, xml, headers);
+    }
+
+    /**
+     * 功能描述: 下载文件到指定流中
+     *
+     * @param okHttpClient OkHttp3 自定义请求客户端（若视频加大，超时时间尽量设置大一点）
+     * @param url          资源URL
+     * @param headers      请求头
+     * @param target       目标文件
+     * @method get2TransformFile
+     * @date 2021/4/26 17:58
+     */
+    public static void urlTransformFile(okhttp3.OkHttpClient okHttpClient, String url, Map<String, String> headers, File target) throws FileNotFoundException {
+        if (Objects.isNull(target)) {
+            return;
+        }
+        final Response response = doGet(okHttpClient, url, null, headers);
+        if (Objects.isNull(response) || Objects.isNull(response.body())) {
+            return;
+        }
+        final InputStream inputStream = response.body().byteStream();
+        // NIO
+        ReadableByteChannel rbc = Channels.newChannel(inputStream);
+        final FileOutputStream out = new FileOutputStream(target);
+        // 文件下载
+        try (rbc; out) {
+            out.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Nullable
+    private static Response getResponse(okhttp3.OkHttpClient okHttpClient, String url, Map<String, String> headers, RequestBody requestBody) {
+        final Request.Builder builder = new Request.Builder()
+            .url(url)
+            .headers(Objects.isNull(headers) ? new Headers.Builder().build() : Headers.of(headers))
+            .post(requestBody);
+        try {
+            return okHttpClient.newCall(builder.build()).execute();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Nullable
+    private static Response getResponse(okhttp3.OkHttpClient okHttpClient, Map<String, String> headers, Request.Builder builder) {
         if (Objects.nonNull(headers) && headers.size() > 0) {
             headers.forEach(builder::addHeader);
         }
-        return respStr(builder.build());
+        try {
+            return okHttpClient.newCall(builder.build()).execute();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     /**
      * 功能描述: 执行请求，返回结果
      *
-     * @param request 请求对象
+     * @param response OkHttp3响应对象
      * @return {@link String}
      * @method respStr
-     * @author Blare
      * @date 2021/4/1514:52
-     * @updator Blare
      */
-    private static String respStr(Request request) {
-        try (
-            Response response = okHttpClient.newCall(request).execute()
-        ) {
-            if (response.isSuccessful()) {
+    private static String getResult(Response response) {
+        if (response.isSuccessful()) {
+            try {
                 return Objects.requireNonNull(response.body()).string();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            LOGGER.info("okHttp3 request 失败 -> {}", response.body());
-        } catch (Exception e) {
-            e.printStackTrace();
-            LOGGER.info("okHttp3 request error >> ex -> {}", e.getMessage());
         }
+        LOGGER.info("okHttp3 request 失败 -> {}", response.body());
         return null;
     }
 
@@ -227,9 +325,7 @@ public class OkHttpClient {
      * @param headersParams 请求header
      * @return {@link Headers}
      * @method setHeaders
-     * @author Blare
      * @date 2021/4/1514:50
-     * @updator Blare
      */
     private static Headers setHeaders(Map<String, String> headersParams) {
         Headers headers = null;
