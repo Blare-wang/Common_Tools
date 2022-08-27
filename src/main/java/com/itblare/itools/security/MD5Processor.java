@@ -15,10 +15,11 @@ package com.itblare.itools.security;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
 import java.util.Objects;
 
 /**
- * 一句话功能简述：MD5 加密
+ * MD5 加密
  *
  * @author Blare
  * @create 2021/4/16 10:36
@@ -31,7 +32,7 @@ public class MD5Processor {
     }
 
     /**
-     * 功能描述: MD5-32位签名算法
+     * MD5-32位签名算法
      *
      * @param encryptedStr 待加密字符串
      * @param charset      字符集【UTF8、UTF-8、GBK、ISO-8859-1等】
@@ -70,7 +71,12 @@ public class MD5Processor {
     }
 
     public static void main(String[] args) {
-        final String encode = md5Encode("123456", "UTF-8");
-        System.out.println(encode);
+        //final String encode = md5Encode("123456", "UTF-8");
+        //System.out.println(encode);
+        System.out.println(Integer.numberOfLeadingZeros(-10));
+        int n = -1 >>> Integer.numberOfLeadingZeros(-10);
+        System.out.println(n);
+        int b = (n < 0) ? 1 : n + 1;
+        System.out.println(b);
     }
 }

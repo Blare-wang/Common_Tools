@@ -24,7 +24,7 @@ import java.util.Objects;
 import static com.itblare.itools.randoms.RandomsProcessor.number;
 
 /**
- * 一句话功能简述：图片验证码
+ * 图片验证码
  *
  * @author Blare
  * @create 2021/4/13 16:53
@@ -99,7 +99,7 @@ public class ImageCapHelper {
     private static final int pixel = number(5);
 
     /**
-     * 功能描述: 返回随机汉字
+     * 返回随机汉字
      *
      * @return {@link char}
      * @method alphaHan
@@ -110,7 +110,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 获取随机常用颜色
+     * 获取随机常用颜色
      *
      * @return {@link Color}
      * @method getCommonlyFontColor
@@ -122,7 +122,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 生成随机颜色
+     * 生成随机颜色
      *
      * @return {@link Color}
      * @method generateRandomColor
@@ -138,7 +138,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 生成随机字体
+     * 生成随机字体
      *
      * @param size 字体大小
      * @return {@link Font}
@@ -174,7 +174,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 随机画干扰线
+     * 随机画干扰线
      *
      * @param interLine 数量
      * @param graphics  图形上下文Graphics对象
@@ -186,7 +186,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 绘制干扰线
+     * 绘制干扰线
      *
      * @param graphics  图形上下文Graphics对象
      * @param interLine 图片中干扰线的条数
@@ -207,7 +207,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 随机画干扰圆
+     * 随机画干扰圆
      *
      * @param interOval 数量
      * @param graphics  图形上下文Graphics对象
@@ -219,7 +219,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 随机画干扰圆
+     * 随机画干扰圆
      *
      * @param interOval 数量
      * @param color     颜色
@@ -236,7 +236,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 随机画贝塞尔曲线
+     * 随机画贝塞尔曲线
      *
      * @param num      数量
      * @param graphics 图形上下文Graphics对象
@@ -248,7 +248,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 随机画贝塞尔曲线
+     * 随机画贝塞尔曲线
      *
      * @param num      数量
      * @param color    颜色
@@ -281,7 +281,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 绘制噪点
+     * 绘制噪点
      *
      * @param bufferedImage 内存图像BufferedImage
      * @param width         图片宽度
@@ -301,7 +301,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 使图片扭曲
+     * 使图片扭曲
      *
      * @param graphics  图形上下文Graphics对象
      * @param width     图片宽度
@@ -318,7 +318,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: X轴方向扭曲
+     * X轴方向扭曲
      *
      * @param graphics 图形上下文Graphics对象
      * @param width    图片宽度
@@ -349,7 +349,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: Y轴方向扭曲
+     * Y轴方向扭曲
      *
      * @param graphics 图形上下文Graphics对象
      * @param width    图片宽度
@@ -378,7 +378,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 生成验证码字符串（ASCII码：0-9~48-57，A-Z~65-90，a-z~97-122）
+     * 生成验证码字符串（ASCII码：0-9~48-57，A-Z~65-90，a-z~97-122）
      *
      * @param type   验证码类型,参见本类的静态属性
      * @param length 验证码长度,要求大于0的整数
@@ -500,7 +500,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 生成图片验证码的缓存对象
+     * 生成图片验证码的缓存对象
      *
      * @param type           验证码类型,参见本类的静态属性
      * @param length         验证码字符长度,要求大于0的整数
@@ -593,7 +593,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 已有验证码,生成验证码图片的缓存对象
+     * 已有验证码,生成验证码图片的缓存对象
      *
      * @param charArr        字符数组
      * @param width          图片宽度(注意此宽度若过小,容易造成验证码文本显示不全,如4个字符的文本可使用85到90的宽度)
@@ -682,7 +682,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 绘制中文验证码
+     * 绘制中文验证码
      *
      * @param charArr         字符数组
      * @param width           图片宽度(注意此宽度若过小,容易造成验证码文本显示不全,如4个字符的文本可使用85到90的宽度)
@@ -777,7 +777,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 绘制GIF中文验证码
+     * 绘制GIF中文验证码
      *
      * @param charArr         字符数组
      * @param width           图片宽度(注意此宽度若过小,容易造成验证码文本显示不全,如4个字符的文本可使用85到90的宽度)
@@ -886,7 +886,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 绘制GIF中文验证码
+     * 绘制GIF中文验证码
      *
      * @param charArr        字符数组
      * @param width          图片宽度(注意此宽度若过小,容易造成验证码文本显示不全,如4个字符的文本可使用85到90的宽度)
@@ -987,7 +987,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 图片绘制
+     * 图片绘制
      *
      * @param graphics       图形上下文Graphics对象
      * @param charArr        字符数组
@@ -1032,7 +1032,7 @@ public class ImageCapHelper {
     }
 
     /**
-     * 功能描述: 透明度
+     * 透明度
      *
      * @return {@link float}
      * @method getAlpha

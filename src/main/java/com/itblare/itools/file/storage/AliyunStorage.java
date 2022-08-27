@@ -33,7 +33,7 @@ import java.io.InputStream;
 import java.util.*;
 
 /**
- * 一句话功能简述：阿里云存储
+ * 阿里云存储
  *
  * @author Blare
  * @create 2021/4/12 18:18

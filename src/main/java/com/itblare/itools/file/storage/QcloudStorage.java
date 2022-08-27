@@ -37,7 +37,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * 一句话功能简述：腾讯云存储
+ * 腾讯云存储
  *
  * @author Blare
  * @create 2021/4/12 18:42
@@ -78,7 +78,7 @@ public class QcloudStorage extends BaseStorage {
     }
 
     /**
-     * 功能描述:  path必须是文件全路径+文件名
+     *  path必须是文件全路径+文件名
      */
     @Override
     public String upload(InputStream inputStream, String key) {

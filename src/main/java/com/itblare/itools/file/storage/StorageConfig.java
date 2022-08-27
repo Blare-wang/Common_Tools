@@ -13,7 +13,7 @@ package com.itblare.itools.file.storage;
  */
 
 /**
- * 一句话功能简述：存储配置
+ * 存储配置
  *
  * @author Blare
  * @create 2021/4/12 11:39

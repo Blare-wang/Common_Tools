@@ -34,7 +34,7 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 一句话功能简述：OK HTTP 客户端
+ * OK HTTP 客户端
  *
  * @author Blare
  * @create 2021/4/15 17:12
@@ -124,7 +124,7 @@ public class OkHttpClient {
     }
 
     /**
-     * 功能描述: OkHttp3 GET请求
+     * OkHttp3 GET请求
      *
      * @param okHttpClient OkHttp3 自定义请求客户端
      * @param url          请求的url
@@ -165,7 +165,7 @@ public class OkHttpClient {
     }
 
     /**
-     * 功能描述: OkHttp3 From 表单POST请求
+     * OkHttp3 From 表单POST请求
      *
      * @param okHttpClient OkHttp3 自定义请求客户端
      * @param url          请求的url
@@ -201,7 +201,7 @@ public class OkHttpClient {
     }
 
     /**
-     * 功能描述: OkHttp3 JSON信息POST请求
+     * OkHttp3 JSON信息POST请求
      *
      * @param okHttpClient OkHttp3 自定义请求客户端
      * @param url          请求的url
@@ -222,7 +222,7 @@ public class OkHttpClient {
     }
 
     /**
-     * 功能描述: OkHttp3 xml信息POST请求
+     * OkHttp3 xml信息POST请求
      *
      * @param okHttpClient OkHttp3 自定义请求客户端
      * @param url          请求url
@@ -243,7 +243,7 @@ public class OkHttpClient {
     }
 
     /**
-     * 功能描述: 下载文件到指定流中
+     * 下载文件到指定流中
      *
      * @param okHttpClient OkHttp3 自定义请求客户端（若视频加大，超时时间尽量设置大一点）
      * @param url          资源URL
@@ -300,7 +300,7 @@ public class OkHttpClient {
     }
 
     /**
-     * 功能描述: 执行请求，返回结果
+     * 执行请求，返回结果
      *
      * @param response OkHttp3响应对象
      * @return {@link String}
@@ -320,7 +320,7 @@ public class OkHttpClient {
     }
 
     /**
-     * 功能描述: Okhttp3 头信息封装
+     * Okhttp3 头信息封装
      *
      * @param headersParams 请求header
      * @return {@link Headers}

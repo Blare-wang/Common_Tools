@@ -19,7 +19,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * 一句话功能简述：SHA256加密
+ * SHA256加密
  *
  * @author Blare
  * @create 2021/4/17 23:45
@@ -30,7 +30,7 @@ public class SHA256Processor {
     private static final String ALGORITHMS_NAME = "SHA-256";
 
     /**
-     * 功能描述: 计算文件hash
+     * 计算文件hash
      *
      * @param filePath 文件路径
      * @return {@link String}
@@ -61,7 +61,7 @@ public class SHA256Processor {
     }
 
     /**
-     * 功能描述: 计算一个字节数组的 hash
+     * 计算一个字节数组的 hash
      *
      * @param src 字节数组
      * @return {@link String}
@@ -81,7 +81,7 @@ public class SHA256Processor {
     }
 
     /**
-     * 功能描述: 字节转HEX字符串
+     * 字节转HEX字符串
      *
      * @param bts 待处理字节数组
      * @return {@link String}

@@ -19,7 +19,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 /**
- * 一句话功能简述：通用Builder 模式构建器
+ * 通用Builder 模式构建器
  * Java8 引入 @FunctionalInterface 注解声明该接口是一个函数式接口。
  * Java8 之函数式编程Supplier接口和Consumer接口。
  * 1. Supplier接口，是一个供应商,提供者，可以作为生产工厂生产对象。
@@ -56,7 +56,7 @@ public class Builder<T> {
     }
 
     /**
-     * 功能描述: 一个参数的构建
+     * 一个参数的构建
      *
      * @param consumer 构建执行方法对象
      * @param p1       参数1
@@ -77,7 +77,7 @@ public class Builder<T> {
     }
 
     /**
-     * 功能描述: 两个参数的构建对象
+     * 两个参数的构建对象
      *
      * @param consumer 构建执行方法
      * @param p1       参数1
@@ -93,7 +93,7 @@ public class Builder<T> {
     }
 
     /**
-     * 功能描述: 三个参数的构建对象
+     * 三个参数的构建对象
      *
      * @param consumer 构建执行方法
      * @param p1       参数1
@@ -110,7 +110,7 @@ public class Builder<T> {
     }
 
     /**
-     * 功能描述: 执行构建
+     * 执行构建
      *
      * @return {@link T}
      * @method build

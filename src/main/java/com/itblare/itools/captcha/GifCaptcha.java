@@ -22,7 +22,7 @@ import java.io.OutputStream;
 import static com.itblare.itools.captcha.ImageCapHelper.graphicsGifImage;
 
 /**
- * 一句话功能简述：动态验证码
+ * 动态验证码
  *
  * @author Blare
  * @create 2021/4/24 18:53
@@ -95,7 +95,7 @@ public class GifCaptcha extends AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 画随机码图
+     * 画随机码图
      *
      * @param fontColor 随机字体颜色
      * @param charArr   字符数组
@@ -126,7 +126,7 @@ public class GifCaptcha extends AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 获取透明度,从0到1,自动计算步长
+     * 获取透明度,从0到1,自动计算步长
      *
      * @return {@link float}
      * @method getAlpha

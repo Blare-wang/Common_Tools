@@ -13,7 +13,7 @@ package com.itblare.itools.http.result;
  */
 
 /**
- * 一句话功能简述：消息接口
+ * 消息接口
  *
  * @author Blare
  * @create 2021/4/15 17:25
@@ -22,7 +22,7 @@ package com.itblare.itools.http.result;
 public interface IMessage {
 
     /**
-     * 功能描述: 得到常量key或值
+     * 得到常量key或值
      *
      * @return {@link String}
      * @method getCode
@@ -31,7 +31,7 @@ public interface IMessage {
     String getCode();
 
     /**
-     * 功能描述: 得到常量的定义或描述（如果国际化,在这里实现）
+     * 得到常量的定义或描述（如果国际化,在这里实现）
      *
      * @return {@link String}
      * @method getMeg

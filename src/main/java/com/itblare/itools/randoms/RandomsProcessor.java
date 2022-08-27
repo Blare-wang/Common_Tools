@@ -15,7 +15,7 @@ package com.itblare.itools.randoms;
 import java.security.SecureRandom;
 
 /**
- * 一句话功能简述：随机字符生成器
+ * 随机字符生成器
  *
  * @author Blare
  * @create 2021/4/24 17:10
@@ -78,7 +78,7 @@ public class RandomsProcessor {
     public static final int lowerMaxIndex = charMaxIndex;
 
     /**
-     * 功能描述: 产生两个数之间的随机数
+     * 产生两个数之间的随机数
      *
      * @param min 最小值
      * @param max 最大值
@@ -91,7 +91,7 @@ public class RandomsProcessor {
     }
 
     /**
-     * 功能描述: 产生0-num的随机数,不包括num
+     * 产生0-num的随机数,不包括num
      *
      * @param num 最大值
      * @return {@link int}
@@ -103,7 +103,7 @@ public class RandomsProcessor {
     }
 
     /**
-     * 功能描述: 获取ALPHA中的随机字符
+     * 获取ALPHA中的随机字符
      *
      * @return {@link char}
      * @method alpha
@@ -114,7 +114,7 @@ public class RandomsProcessor {
     }
 
     /**
-     * 功能描述: 获取ALPHA中第0位到第num位的随机字符
+     * 获取ALPHA中第0位到第num位的随机字符
      *
      * @param number 到第几位结束
      * @return {@link char}
@@ -126,7 +126,7 @@ public class RandomsProcessor {
     }
 
     /**
-     * 功能描述: 获取ALPHA中第min位到第max位的随机字符
+     * 获取ALPHA中第min位到第max位的随机字符
      *
      * @param min 从第几位开始
      * @param max 到第几位结束

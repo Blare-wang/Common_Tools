@@ -17,7 +17,7 @@ import java.awt.*;
 import static com.itblare.itools.captcha.ImageCapHelper.alphaHan;
 
 /**
- * 一句话功能简述：中文验证码抽象类
+ * 中文验证码抽象类
  *
  * @author Blare
  * @create 2021/4/24 18:27

@@ -23,7 +23,7 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.*;
 
 /**
- * 一句话功能简述：时间处理器
+ * 时间处理器
  *
  * @author Blare
  * @create 2021/4/17 21:49
@@ -32,7 +32,7 @@ import java.util.*;
 public class DateProcessor {
 
     /**
-     * 功能描述: 日期转换
+     * 日期转换
      *
      * @param time 时间戳
      * @param fmt  格式，eg：yyyy-MM-dd HH:mm:ss
@@ -49,7 +49,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取当前时间戳(毫秒)
+     * 获取当前时间戳(毫秒)
      *
      * @return {@link Long}
      * @method getCurrentTimeMills
@@ -60,7 +60,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取系统当前时间（秒）
+     * 获取系统当前时间（秒）
      *
      * @return {@link Timestamp}
      * @method getTime
@@ -74,7 +74,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取当前日期开始(时间 00:00:00)
+     * 获取当前日期开始(时间 00:00:00)
      *
      * @return {@link Timestamp}
      * @method getDateFirst
@@ -88,7 +88,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取当前日期结束(时间 23:59:59)
+     * 获取当前日期结束(时间 23:59:59)
      *
      * @return {@link Timestamp}
      * @method getDateLast
@@ -102,7 +102,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取昨日开始时间 00:00:00
+     * 获取昨日开始时间 00:00:00
      *
      * @return {@link Timestamp}
      * @method getYesterdayBegin
@@ -117,7 +117,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取昨日最后时间 23:59:59
+     * 获取昨日最后时间 23:59:59
      *
      * @return {@link Timestamp}
      * @method getYesterdayEnd
@@ -132,7 +132,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取当前日期
+     * 获取当前日期
      *
      * @return {@link Date}
      * @method getDate
@@ -144,7 +144,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 格式（yyyy-MM-dd HH:mm:ss）转换成 Timestamp
+     * 格式（yyyy-MM-dd HH:mm:ss）转换成 Timestamp
      *
      * @param timeString 格式时间
      * @return {@link Timestamp}
@@ -156,7 +156,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 自定义格式的字符串转换成日期
+     * 自定义格式的字符串转换成日期
      *
      * @param timeString 日期时间字符串
      * @param fmt        格式，eg：yyyy-MM-dd HH:mm:ss
@@ -172,7 +172,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 格式化日期
+     * 格式化日期
      *
      * @param date 日期
      * @param fmt  自定义格式，eg：yyyy-MM-dd HH:mm:ss
@@ -189,7 +189,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 格式化日期
+     * 格式化日期
      *
      * @param timeString    时间字符串
      * @param timeStringFmt 时间字符串格式
@@ -206,7 +206,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 返回日期或者时间，如果传入的是日期，返回日期的 00:00:00 时间
+     * 返回日期或者时间，如果传入的是日期，返回日期的 00:00:00 时间
      *
      * @param timeString 时间字符串
      * @return {@link Timestamp}
@@ -226,7 +226,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 返回日期或者时间，如果传入的是日期，返回日期的 23:59:59 时间
+     * 返回日期或者时间，如果传入的是日期，返回日期的 23:59:59 时间
      *
      * @param timeString 时间字符串
      * @return {@link Timestamp}
@@ -245,7 +245,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取本周周一时间，返回格式 yyyy-MM-dd 00:00:00
+     * 获取本周周一时间，返回格式 yyyy-MM-dd 00:00:00
      *
      * @return {@link Timestamp}
      * @method getMonday
@@ -264,7 +264,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取本周周日时间，返回格式 yyyy-MM-dd 23:59:59
+     * 获取本周周日时间，返回格式 yyyy-MM-dd 23:59:59
      *
      * @return {@link Timestamp}
      * @method getSunday
@@ -283,7 +283,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 增加天数
+     * 增加天数
      *
      * @param time 时间戳
      * @param day  增加的天数
@@ -296,7 +296,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 比较 2 个日期格式的字符串
+     * 比较 2 个日期格式的字符串
      *
      * @param str1 格式 ：yyyyMMdd
      * @param str2 格式 ：yyyyMMdd
@@ -309,7 +309,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 2 个时间的相差天数
+     * 2 个时间的相差天数
      *
      * @param time1 时间1
      * @param time2 时间2
@@ -323,7 +323,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取系统当前时间（分）
+     * 获取系统当前时间（分）
      *
      * @return {@link String}
      * @method getMinute
@@ -335,7 +335,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取系统当前时间
+     * 获取系统当前时间
      *
      * @return {@link String}
      * @method getDateTime
@@ -346,7 +346,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取系统当前日期
+     * 获取系统当前日期
      *
      * @return {@link String}
      * @method getDateTimeDay
@@ -357,7 +357,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取系统当前时间
+     * 获取系统当前时间
      *
      * @param formatStyle 返回时间格式
      * @return {@link String}
@@ -373,7 +373,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 格式化时间成yyyy-MM-dd HH:mm:ss
+     * 格式化时间成yyyy-MM-dd HH:mm:ss
      *
      * @param time 待格式化时间
      * @return {@link String}
@@ -385,7 +385,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 格式化时间成yyyy-MM-dd HH:mm:ss
+     * 格式化时间成yyyy-MM-dd HH:mm:ss
      *
      * @param time    待格式化时间
      * @param timeStr 时间格式
@@ -403,7 +403,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 转换成时间 字符串格式必须为 yyyy-MM-dd HH:mm:ss 或 yyyy-MM-dd
+     * 转换成时间 字符串格式必须为 yyyy-MM-dd HH:mm:ss 或 yyyy-MM-dd
      *
      * @param val 待转换时间
      * @return {@link Date}
@@ -427,7 +427,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取上月的第一天 yyyy-MM-dd 00:00:00 和最后一天 yyyy-MM-dd 23:59:59
+     * 获取上月的第一天 yyyy-MM-dd 00:00:00 和最后一天 yyyy-MM-dd 23:59:59
      *
      * @return {@link Map}
      * @method getPreMonth
@@ -461,7 +461,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取本月的第一天 yyyy-MM-dd 00:00:00
+     * 获取本月的第一天 yyyy-MM-dd 00:00:00
      *
      * @return {@link String}
      * @method getNowMonth
@@ -485,7 +485,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述:  获取上周周一时间，返回格式 yyyy-MM-dd 00:00:00
+     *  获取上周周一时间，返回格式 yyyy-MM-dd 00:00:00
      *
      * @return {@link Timestamp}
      * @method getPreMonday
@@ -508,7 +508,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取上周周日时间，返回格式 yyyy-MM-dd 23:59:59
+     * 获取上周周日时间，返回格式 yyyy-MM-dd 23:59:59
      *
      * @return {@link Timestamp}
      * @method getPreSunday
@@ -530,7 +530,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 字符串日期加n天
+     * 字符串日期加n天
      *
      * @param date       日期
      * @param days       加的天数
@@ -555,7 +555,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 计算两个字符串的时间相差的时间
+     * 计算两个字符串的时间相差的时间
      *
      * @param beforeDate 开始时间
      * @param afterDate  结束时间
@@ -578,7 +578,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 计算日期两个差的月份
+     * 计算日期两个差的月份
      *
      * @param beforeDate 格式 yyyyMM
      * @param afterDate  格式 yyyyMM
@@ -605,7 +605,7 @@ public class DateProcessor {
     }
 
     /**
-     * 功能描述: 获取日期的周
+     * 获取日期的周
      *
      * @param dt 日期
      * @return {@link String}
@@ -693,7 +693,7 @@ public class DateProcessor {
         private static final DateTimeFormatter mediumDate = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
 
         /**
-         * 功能描述: 获取当前日期（yyyy-MM-dd）
+         * 获取当前日期（yyyy-MM-dd）
          *
          * @return {@link String}
          * @method getNowDate_EN
@@ -704,7 +704,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前日期时间（yyyy-MM-dd HH:mm:ss）
+         * 获取当前日期时间（yyyy-MM-dd HH:mm:ss）
          *
          * @return {@link String}
          * @method getNowTime_EN
@@ -722,7 +722,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前时间（yyyy年MM月dd日）
+         * 获取当前时间（yyyy年MM月dd日）
          *
          * @return {@link String}
          * @method getNowTime_CN_yMdH
@@ -733,7 +733,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前时间（yyyy-MM-dd HH:mm）
+         * 获取当前时间（yyyy-MM-dd HH:mm）
          *
          * @return {@link String}
          * @method getNowTime_EN_yMdHm
@@ -744,7 +744,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前时间（yyyy年MM月dd日HH时mm分）
+         * 获取当前时间（yyyy年MM月dd日HH时mm分）
          *
          * @return {@link String}
          * @method getNowTime_CN_yMdHm
@@ -755,7 +755,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前时间（HH时mm分ss秒）
+         * 获取当前时间（HH时mm分ss秒）
          *
          * @return {@link String}
          * @method getNowTime_CN_HHmmss
@@ -766,7 +766,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 根据日期格式，获取当前时间
+         * 根据日期格式，获取当前时间
          *
          * @param formatStr 日期格式：yyyy，yyyy-MM-dd，yyyy-MM-dd HH:mm:ss，HH:mm:ss
          * @return {@link String}
@@ -778,7 +778,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取中文的当前日期（yyyy年MM月dd日）
+         * 获取中文的当前日期（yyyy年MM月dd日）
          *
          * @return {@link String}
          * @method getNowDate_CN
@@ -789,7 +789,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取中文当前时间（yyyy年MM月dd日HH时mm分ss秒）
+         * 获取中文当前时间（yyyy年MM月dd日HH时mm分ss秒）
          *
          * @return {@link String}
          * @method getNowTime_CN
@@ -800,7 +800,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 简写本地当前日期：yy-M-dd，例如：19-3-30为2019年3月30日
+         * 简写本地当前日期：yy-M-dd，例如：19-3-30为2019年3月30日
          *
          * @return {@link String}
          * @method getNowLocalTime_shot
@@ -811,7 +811,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 根据当地日期显示格式：yyyy年M月dd日 星期？（中国），形如：2019年3月30日 星期六
+         * 根据当地日期显示格式：yyyy年M月dd日 星期？（中国），形如：2019年3月30日 星期六
          *
          * @return {@link String}
          * @method getNowLocalTime_full
@@ -822,7 +822,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 根据当地显示日期格式：yyyy年M月dd日（中国），形如 2019年3月30日
+         * 根据当地显示日期格式：yyyy年M月dd日（中国），形如 2019年3月30日
          *
          * @return {@link String}
          * @method getNowLocalTime_long
@@ -833,7 +833,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 根据当地显示日期格式：yyyy-M-dd（中国），形如：2019-3-30
+         * 根据当地显示日期格式：yyyy-M-dd（中国），形如：2019-3-30
          *
          * @return {@link String}
          * @method getNowLocalTime_medium
@@ -844,7 +844,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前日期的节点时间（年，月，周，日，时，分，秒）,节点数字，如创建此方法的时间：年 2019，月 3，日 30，周 6
+         * 获取当前日期的节点时间（年，月，周，日，时，分，秒）,节点数字，如创建此方法的时间：年 2019，月 3，日 30，周 6
          *
          * @param node 日期中的节点元素（年，月，周，日，时，分，秒）
          * @return {@link Integer}
@@ -885,7 +885,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 将英文星期转换成数字
+         * 将英文星期转换成数字
          *
          * @param enWeek 英文星期
          * @return {@link int}
@@ -913,7 +913,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前日期之后（之后）的节点事件。
+         * 获取当前日期之后（之后）的节点事件。
          * 比如当前时间为：2019-03-30 10:20:30
          * node="hour",num=5L:2019-03-30 15:20:30
          * node="day",num=1L:2019-03-31 10:20:30
@@ -930,7 +930,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取日期时间变得结果
+         * 获取日期时间变得结果
          *
          * @param node              节点元素（“year”,"month","week","day","huor","minute","second"）
          * @param num               第几天（+：之后，-：之前）
@@ -961,7 +961,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取与当前日期相距num个之后（之前）的日期。
+         * 获取与当前日期相距num个之后（之前）的日期。
          * 比如当前时间为：2019-03-30 10:20:30的格式日期
          * node="hour",num=5L:2019-03-30 15:20:30
          * node="day",num=1L:2019-03-31 10:20:30
@@ -979,7 +979,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 当前时间的hour，minute，second之后（之前）的时刻，返回HH:mm:ss 字符串
+         * 当前时间的hour，minute，second之后（之前）的时刻，返回HH:mm:ss 字符串
          *
          * @param node 时间节点元素（hour，minute，second）
          * @param num  之后（之后）多久时，分，秒（+：之后，-：之前）
@@ -1001,7 +1001,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 检查重复事件，比如生日。
+         * 检查重复事件，比如生日。
          *
          * @param month      月份
          * @param dayOfMonth 天号
@@ -1016,7 +1016,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前日期第index日之后(之前)的日期（yyyy-MM-dd）
+         * 获取当前日期第index日之后(之前)的日期（yyyy-MM-dd）
          *
          * @param index 第index天
          * @return {@link String}
@@ -1028,7 +1028,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前日期第index周之前（之后）的日期（yyyy-MM-dd）
+         * 获取当前日期第index周之前（之后）的日期（yyyy-MM-dd）
          *
          * @param index 第index周（+：之后，-：之前）
          * @return {@link String}
@@ -1040,7 +1040,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前日期第index月之前（之后）的日期（yyyy-MM-dd）
+         * 获取当前日期第index月之前（之后）的日期（yyyy-MM-dd）
          *
          * @param index 第index月（+：之后，-：之前）
          * @return {@link String}
@@ -1052,7 +1052,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取当前日期第index年之前（之后）的日期（yyyy-MM-dd）
+         * 获取当前日期第index年之前（之后）的日期（yyyy-MM-dd）
          *
          * @param index 第index年（+：之后，-：之前）
          * @return {@link String}
@@ -1064,7 +1064,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取指定日期之前之后的第index的日，周，月，年的日期，返回yyyy-MM-dd 日期字符串
+         * 获取指定日期之前之后的第index的日，周，月，年的日期，返回yyyy-MM-dd 日期字符串
          *
          * @param date  指定日期格式：yyyy-MM-dd
          * @param node  时间节点元素（日周月年）
@@ -1089,7 +1089,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 检测：输入年份是否是闰年？返回：true：闰年，false：平年
+         * 检测：输入年份是否是闰年？返回：true：闰年，false：平年
          *
          * @param date 日期格式：yyyy-MM-dd
          * @return {@link boolean}
@@ -1101,7 +1101,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 计算两个日期字符串之间相差多少个周期（天，月，年）
+         * 计算两个日期字符串之间相差多少个周期（天，月，年）
          *
          * @param date1 yyyy-MM-dd
          * @param date2 yyyy-MM-dd
@@ -1125,7 +1125,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 切割日期。按照周期切割成小段日期段。
+         * 切割日期。按照周期切割成小段日期段。
          * 示例1：startDate="2019-02-28",endDate="2019-03-05",period="day"
          * 结果为：[2019-02-28, 2019-03-01, 2019-03-02, 2019-03-03, 2019-03-04, 2019-03-05]
          * 示例2：startDate="2019-02-28",endDate="2019-03-25",period="week"
@@ -1193,7 +1193,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 指定日期月的最后一天（yyyy-MM-dd）
+         * 指定日期月的最后一天（yyyy-MM-dd）
          *
          * @param curDate     日期格式（yyyy-MM-dd）
          * @param firstOrLast true：第一天，false：最后一天
@@ -1210,7 +1210,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 指定日期年的最后一天（yyyy-MM-dd）
+         * 指定日期年的最后一天（yyyy-MM-dd）
          *
          * @param curDate     指定日期（格式：yyyy-MM-dd）
          * @param firstOrLast true:第一天，false:最后一天
@@ -1227,7 +1227,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取下一个星期的日期（yyyy-MM-dd）
+         * 获取下一个星期的日期（yyyy-MM-dd）
          *
          * @param curDay          yyyy-MM-dd
          * @param dayOfWeek       monday:1~sunday:7
@@ -1246,7 +1246,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取上一个星期的日期（yyyy-MM-dd）
+         * 获取上一个星期的日期（yyyy-MM-dd）
          *
          * @param curDay    指定日期（yyyy-MM-dd）
          * @param dayOfWeek 数字范围（monday:1~sunday:7）
@@ -1265,7 +1265,7 @@ public class DateProcessor {
         }
 
         /**
-         * 功能描述: 获取指定日期当月的最后或第一个星期日期（yyyy-MM-dd）
+         * 获取指定日期当月的最后或第一个星期日期（yyyy-MM-dd）
          *
          * @param curDay      指定日期（yyyy-MM-dd）
          * @param dayOfWeek   周几（1~7）

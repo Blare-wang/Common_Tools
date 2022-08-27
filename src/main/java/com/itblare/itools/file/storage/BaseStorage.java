@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.util.Map;
 
 /**
- * 一句话功能简述：数据存储(支持本地、自定义存储、七牛云、阿里云、腾讯云
+ * 数据存储(支持本地、自定义存储、七牛云、阿里云、腾讯云
  *
  * @author Blare
  * @create 2021/4/12 11:38
@@ -54,7 +54,7 @@ public abstract class BaseStorage {
     }
 
     /**
-     * 功能描述: 文件上传
+     * 文件上传
      *
      * @param data 文件字节数组
      * @param key  文件路径，包含文件名
@@ -65,7 +65,7 @@ public abstract class BaseStorage {
     public abstract String upload(byte[] data, String key);
 
     /**
-     * 功能描述: 文件上传
+     * 文件上传
      *
      * @param data   文件字节数组
      * @param suffix 后缀
@@ -76,7 +76,7 @@ public abstract class BaseStorage {
     public abstract String uploadSuffix(byte[] data, String suffix);
 
     /**
-     * 功能描述: 文件上传
+     * 文件上传
      *
      * @param inputStream 字节流
      * @param key         文件路径，包含文件名
@@ -87,7 +87,7 @@ public abstract class BaseStorage {
     public abstract String upload(InputStream inputStream, String key);
 
     /**
-     * 功能描述: 文件上传
+     * 文件上传
      *
      * @param inputStream 字节流
      * @param suffix      后缀
@@ -98,7 +98,7 @@ public abstract class BaseStorage {
     public abstract String uploadSuffix(InputStream inputStream, String suffix);
 
     /**
-     * 功能描述: 删除文件
+     * 删除文件
      *
      * @param key 路径（包含名称）
      * @return {@link boolean}
@@ -118,7 +118,7 @@ public abstract class BaseStorage {
     public abstract InputStream downloadFile(String key);
 
     /**
-     * 功能描述: 图片文件URL转存
+     * 图片文件URL转存
      *
      * @param imgUrl  图片连接
      * @param referer 为了预防某些网站做了权限验证，不加referer可能会403
@@ -139,7 +139,7 @@ public abstract class BaseStorage {
     }
 
     /**
-     * 功能描述: 分片上传文件
+     * 分片上传文件
      *
      * @param file 待上传文件
      * @param key  路径（包含名称）
@@ -150,7 +150,7 @@ public abstract class BaseStorage {
     public abstract String multipartUpload(File file, String key);
 
     /**
-     * 功能描述: 获取上传token
+     * 获取上传token
      *
      * @method getUploadToken
      * @return {@link Map}

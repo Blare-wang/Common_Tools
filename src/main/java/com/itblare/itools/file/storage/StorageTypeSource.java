@@ -13,7 +13,7 @@ package com.itblare.itools.file.storage;
  */
 
 /**
- * 一句话功能简述：存储类型
+ * 存储类型
  *
  * @author Blare
  * @create 2021/4/13 10:44

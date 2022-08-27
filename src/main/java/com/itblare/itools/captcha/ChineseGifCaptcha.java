@@ -22,7 +22,7 @@ import java.io.OutputStream;
 import static com.itblare.itools.captcha.ImageCapHelper.graphicsChineseGifImage;
 
 /**
- * 一句话功能简述：中文动态验证码
+ * 中文动态验证码
  *
  * @author Blare
  * @create 2021/4/24 18:38
@@ -95,7 +95,7 @@ public class ChineseGifCaptcha extends AbstractChineseCaptcha {
     }
 
     /**
-     * 功能描述: 画随机码图
+     * 画随机码图
      *
      * @param charArr  字符数组
      * @param flag     透明度
@@ -127,7 +127,7 @@ public class ChineseGifCaptcha extends AbstractChineseCaptcha {
     }
 
     /**
-     * 功能描述: 获取透明度,从0到1,自动计算步长
+     * 获取透明度,从0到1,自动计算步长
      *
      * @return {@link float}
      * @method getAlpha

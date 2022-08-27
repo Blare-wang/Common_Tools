@@ -20,7 +20,7 @@ import java.security.spec.X509EncodedKeySpec;
 import java.util.Objects;
 
 /**
- * 一句话功能简述：非对称加密
+ * 非对称加密
  *
  * @author Blare
  * @create 2021/4/17 23:48
@@ -43,7 +43,7 @@ public class RSAProcessor {
     private static final String SIGNATURE_ALGORITHM = "MD5withRSA";
 
     /**
-     * 功能描述: 还原公钥，X509EncodedKeySpec 用于构建公钥的规范
+     * 还原公钥，X509EncodedKeySpec 用于构建公钥的规范
      *
      * @param publicKeyBytes 公钥key
      * @return {@link PublicKey}
@@ -63,7 +63,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 还原私钥，PKCS8EncodedKeySpec 用于构建私钥的规范
+     * 还原私钥，PKCS8EncodedKeySpec 用于构建私钥的规范
      *
      * @param privateKeyBytes 私钥key
      * @return {@link PrivateKey}
@@ -83,7 +83,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 还原公钥，X509EncodedKeySpec 用于构建公钥的规范
+     * 还原公钥，X509EncodedKeySpec 用于构建公钥的规范
      *
      * @param publicKeyBytes 公钥key
      * @return {@link PublicKey}
@@ -104,7 +104,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 还原私钥，PKCS8EncodedKeySpec 用于构建私钥的规范
+     * 还原私钥，PKCS8EncodedKeySpec 用于构建私钥的规范
      *
      * @param privateKeyBytes 私钥key
      * @return {@link PrivateKey}
@@ -125,7 +125,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 生成密钥对
+     * 生成密钥对
      *
      * @param keySize key大小，默认1024
      * @return {@link KeyPair}
@@ -136,7 +136,7 @@ public class RSAProcessor {
 
         try {
             /*
-             * 功能描述: <br>
+             * <br>
              * 〈
              *   KeyPairGenerator类用于生成公钥和私钥对。 密钥对生成器使用getInstance工厂方法（返回给定类的实例的静态方法）构造。
              *   用于特定算法的密钥对生成器创建可以与该算法一起使用的公钥/私钥对。 它还将算法特定的参数与生成的每个密钥相关联。
@@ -160,7 +160,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 获取公钥
+     * 获取公钥
      *
      * @param keyPair 密钥对
      * @return {@link String}
@@ -178,7 +178,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 获取密钥
+     * 获取密钥
      *
      * @param keyPair 密钥对
      * @return {@link String}
@@ -198,7 +198,7 @@ public class RSAProcessor {
     // ------------ 私钥签名， 公钥认证 （常用） ------------ //
 
     /**
-     * 功能描述: 生成数字签名，私钥签名
+     * 生成数字签名，私钥签名
      *
      * @param data        加密数据
      * @param private_key 私钥
@@ -224,7 +224,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 校验数字签名，公钥认证
+     * 校验数字签名，公钥认证
      *
      * @param data       被签名数据，明文
      * @param sign       数字签名
@@ -255,7 +255,7 @@ public class RSAProcessor {
     // ------------ 私钥加密，公钥解密 ------------ //
 
     /**
-     * 功能描述: 私钥加密
+     * 私钥加密
      *
      * @param data        待加密信息
      * @param private_key 私钥
@@ -281,7 +281,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 公钥解密
+     * 公钥解密
      *
      * @param secret     密文
      * @param public_key 公钥
@@ -307,7 +307,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 公钥加密
+     * 公钥加密
      *
      * @param data       待加密信息
      * @param public_key 公钥
@@ -333,7 +333,7 @@ public class RSAProcessor {
     }
 
     /**
-     * 功能描述: 私钥解密
+     * 私钥解密
      *
      * @param secret      密文
      * @param private_key 私钥

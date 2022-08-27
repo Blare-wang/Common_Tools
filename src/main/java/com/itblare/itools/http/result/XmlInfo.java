@@ -13,7 +13,7 @@ package com.itblare.itools.http.result;
  */
 
 /**
- * 一句话功能简述：XML 信息接口
+ * XML 信息接口
  *
  * @author Blare
  * @create 2021/4/16 10:31
@@ -22,7 +22,7 @@ package com.itblare.itools.http.result;
 public interface XmlInfo {
 
     /**
-     * 功能描述: 代码
+     * 代码
      *
      * @method getCode
      * @return {@link String}
@@ -31,7 +31,7 @@ public interface XmlInfo {
     String getCode();
 
     /**
-     * 功能描述: 信息
+     * 信息
      *
      * @method getMessage
      * @return {@link String}

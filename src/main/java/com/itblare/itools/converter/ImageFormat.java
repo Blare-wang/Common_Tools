@@ -13,7 +13,7 @@ package com.itblare.itools.converter;
  */
 
 /**
- * 一句话功能简述：图片格式转换,
+ * 图片格式转换,
  *  进行.jpg .jpeg .png .bmp .heic图片格式转换
  *
  * @author Blare

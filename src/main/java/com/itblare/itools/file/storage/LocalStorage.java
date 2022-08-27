@@ -17,7 +17,7 @@ import java.io.InputStream;
 import java.util.Map;
 
 /**
- * 一句话功能简述：本地存储
+ * 本地存储
  *
  * @author Blare
  * @create 2021/4/13 10:43

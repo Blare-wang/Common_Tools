@@ -23,7 +23,7 @@ import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 
 /**
- * 一句话功能简述：全新的、安全的加密算法:PBKDF2
+ * 全新的、安全的加密算法:PBKDF2
  * PBKDF2算法通过多次hash来对密码进行加密。
  * 原理是通过password和salt进行hash，然后将结果作为salt在与password进行hash，多次重复此过程，生成最终的密文。
  * 此过程可能达到上千次
@@ -48,7 +48,7 @@ public class PBKDF2Processor {
     private static final int PBKDF2_ITERATIONS = 1000;
 
     /**
-     * 功能描述: 密码验证
+     * 密码验证
      *
      * @param password 输入的密码
      * @param salt     盐
@@ -66,7 +66,7 @@ public class PBKDF2Processor {
     }
 
     /**
-     * 功能描述: 生成密文
+     * 生成密文
      *
      * @param password 密码
      * @param salt     盐
@@ -86,7 +86,7 @@ public class PBKDF2Processor {
     }
 
     /**
-     * 功能描述: 生成随机盐
+     * 生成随机盐
      *
      * @return {@link String}
      * @method getSalt

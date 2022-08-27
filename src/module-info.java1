@@ -1,0 +1,4 @@
+//module itools.base{
+//    requires java.base;
+//    exports com.itblare.itools.avatar;
+//}

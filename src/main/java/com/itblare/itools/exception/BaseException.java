@@ -16,7 +16,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 /**
- * 一句话功能简述：自定义基础型运行时异常类
+ * 自定义基础型运行时异常类
  *
  * @author Blare
  * @create 2021/4/12 10:31

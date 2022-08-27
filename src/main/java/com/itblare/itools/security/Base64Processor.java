@@ -13,7 +13,7 @@ package com.itblare.itools.security;
  */
 
 /**
- * 一句话功能简述：Base64工具
+ * Base64工具
  *
  * @author Blare
  * @create 2021/4/17 23:22
@@ -22,7 +22,7 @@ package com.itblare.itools.security;
 public class Base64Processor {
 
     /**
-     * 功能描述: base64 编码
+     * base64 编码
      *
      * @param data 待加密数据字节数组
      * @return {@link String}
@@ -34,7 +34,7 @@ public class Base64Processor {
     }
 
     /**
-     * 功能描述: base64 解码
+     * base64 解码
      *
      * @param encodeStr 待解密字符串
      * @return {@link byte[]}

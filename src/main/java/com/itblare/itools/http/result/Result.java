@@ -17,7 +17,7 @@ import java.text.MessageFormat;
 import java.util.Objects;
 
 /**
- * 一句话功能简述：响应结果
+ * 响应结果
  *
  * @author Blare
  * @create 2021/4/15 17:30

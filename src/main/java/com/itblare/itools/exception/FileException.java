@@ -13,7 +13,7 @@ package com.itblare.itools.exception;
  */
 
 /**
- * 一句话功能简述：文件异常
+ * 文件异常
  *
  * @author Blare
  * @create 2021/4/12 10:35

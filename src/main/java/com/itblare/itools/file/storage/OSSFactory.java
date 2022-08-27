@@ -17,7 +17,7 @@ import com.itblare.itools.exception.OssApiException;
 import java.util.Objects;
 
 /**
- * 一句话功能简述：对象存储工厂
+ * 对象存储工厂
  *
  * @author Blare
  * @create 2021/4/13 10:39

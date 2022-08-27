@@ -15,7 +15,7 @@ package com.itblare.itools.avatar;
 import java.security.MessageDigest;
 
 /**
- * 一句话功能简述：邮箱头像
+ * 邮箱头像
  *
  * @author Blare
  * @create 2021/4/19 17:53
@@ -24,7 +24,7 @@ import java.security.MessageDigest;
 public class EmailAr {
 
     /**
-     * 功能描述: 邮箱MD5
+     * 邮箱MD5
      *
      * @param message 邮箱地址
      * @return {@link String}
@@ -44,7 +44,7 @@ public class EmailAr {
     }
 
     /**
-     * 功能描述: 字节转HexString
+     * 字节转HexString
      *
      * @param bytes 字节数组
      * @return {@link String}
@@ -66,7 +66,7 @@ public class EmailAr {
     }
 
     /**
-     * 功能描述: 根据email获取gravatar头像
+     * 根据email获取gravatar头像
      *
      * @param email 邮箱地址
      * @return {@link String}

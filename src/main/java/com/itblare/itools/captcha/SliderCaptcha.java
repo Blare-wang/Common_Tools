@@ -30,7 +30,7 @@ import java.util.Map;
 import static java.awt.Font.BOLD;
 
 /**
- * 一句话功能简述：滑动验证码
+ * 滑动验证码
  *
  * @author Blare
  * @create 2021/4/13 16:55
@@ -86,7 +86,7 @@ public class SliderCaptcha {
     private static final Charset DEFAULT_CHARSET = StandardCharsets.UTF_8;
 
     /**
-     * 功能描述: 根据模板切图,并返回背景图和滑块图
+     * 根据模板切图,并返回背景图和滑块图
      *
      * @param templateFile 模板图片
      * @param targetFile   目标原图片
@@ -99,7 +99,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 根据模板切图,并返回背景图和滑块图
+     * 根据模板切图,并返回背景图和滑块图
      *
      * @param templateFile 模板图片
      * @param targetFile   目标原图片
@@ -182,7 +182,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 添加水印
+     * 添加水印
      *
      * @param oriImage  待添加水印图
      * @param watermark 水印字符
@@ -207,7 +207,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 根据模板进行抠图
+     * 根据模板进行抠图
      *
      * @param oriImage      原图
      * @param templateImage 模板图
@@ -276,7 +276,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 读取原图指定像素点的RGB值L: 图像像素矩阵
+     * 读取原图指定像素点的RGB值L: 图像像素矩阵
      *
      * @param img    原图
      * @param x      随机扣取坐标X
@@ -310,7 +310,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 将抠图区域点的RGB值存到缓存矩阵中
+     * 将抠图区域点的RGB值存到缓存矩阵中
      *
      * @param matrix 矩阵
      * @param values 像素点的RGB值数组
@@ -327,7 +327,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 平均化矩阵中每个值（均值模糊化）
+     * 平均化矩阵中每个值（均值模糊化）
      *
      * @param matrix 矩阵
      * @return {@link int}
@@ -357,7 +357,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 高斯模糊化
+     * 高斯模糊化
      *
      * @param matrix 矩阵
      * @return {@link int}
@@ -384,7 +384,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 获取高斯权重矩阵
+     * 获取高斯权重矩阵
      *
      * @param n     高斯模糊半径
      * @param sigma 高斯函数的σ值
@@ -415,7 +415,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 获取矩阵权重总和
+     * 获取矩阵权重总和
      *
      * @param weightMatrix 权重矩阵
      * @return {@link float}
@@ -434,7 +434,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 矩阵个点除以总值这个过程也叫做”归一问题“,目的是让滤镜的权重总值等于1。否则的话，使用总值大于1的滤镜会让图像偏亮，小于1的滤镜会让图像偏暗
+     * 矩阵个点除以总值这个过程也叫做”归一问题“,目的是让滤镜的权重总值等于1。否则的话，使用总值大于1的滤镜会让图像偏亮，小于1的滤镜会让图像偏暗
      *
      * @param kernalData 矩阵
      * @param sum        总值
@@ -452,7 +452,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 转换字节数组为Base64字符串
+     * 转换字节数组为Base64字符串
      *
      * @param src 字节数组
      * @return {@link String}
@@ -466,7 +466,7 @@ public class SliderCaptcha {
     }
 
     /**
-     * 功能描述: 转换Base64字符串为数组
+     * 转换Base64字符串为数组
      *
      * @param src Base64字符串
      * @return {@link byte[]}

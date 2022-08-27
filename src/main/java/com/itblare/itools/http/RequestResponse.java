@@ -40,7 +40,7 @@ public class RequestResponse {
     private static final String STR_BODY = "body";
 
     /**
-     * 功能描述: 获取HTTP所有请求参数
+     * 获取HTTP所有请求参数
      *
      * @param request HTTP请求
      * @return {@link Map}
@@ -61,7 +61,7 @@ public class RequestResponse {
     }
 
     /**
-     * 功能描述: 获取HTTP请求体参数
+     * 获取HTTP请求体参数
      *
      * @param request HTTP请求
      * @return {@link Map}
@@ -89,7 +89,7 @@ public class RequestResponse {
     }
 
     /**
-     * 功能描述: 获取HTTP指定请求参数
+     * 获取HTTP指定请求参数
      *
      * @param request HTTP请求
      * @param key     参数键值
@@ -102,7 +102,7 @@ public class RequestResponse {
     }
 
     /**
-     * 功能描述: 获取HTTP指定头信息
+     * 获取HTTP指定头信息
      *
      * @param request HTTP 请求
      * @param key     请求头键值
@@ -115,7 +115,7 @@ public class RequestResponse {
     }
 
     /**
-     * 功能描述: 获取HTTP所有请求头信息
+     * 获取HTTP所有请求头信息
      *
      * @param request HTTP 请求
      * @return {@link Map}
@@ -136,7 +136,7 @@ public class RequestResponse {
     }
 
     /**
-     * 功能描述: 获取HTTP请求封装对象:自定义封装
+     * 获取HTTP请求封装对象:自定义封装
      *
      * @param request HTTP请求
      * @return {@link HttpServletRequest}
@@ -149,7 +149,7 @@ public class RequestResponse {
 
 
     /**
-     * 功能描述: 封装response  统一json返回
+     * 封装response  统一json返回
      *
      * @param outStr   输出结果
      * @param response HTTP响应对象

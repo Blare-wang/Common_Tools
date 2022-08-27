@@ -14,7 +14,7 @@ package com.itblare.itools.http.result;
 
 
 /**
- * 一句话功能简述：结果处理工厂
+ * 结果处理工厂
  *
  * @author Blare
  * @create 2021/4/15 17:28
@@ -23,7 +23,7 @@ package com.itblare.itools.http.result;
 public class ResultFactory {
 
     /**
-     * 功能描述: 成功结果
+     * 成功结果
      *
      * @return {@link Result<M>}
      * @method wrapper
@@ -34,7 +34,7 @@ public class ResultFactory {
     }
 
     /**
-     * 功能描述: 成功结果
+     * 成功结果
      *
      * @return {@link Result<M>}
      * @method wrapper
@@ -72,7 +72,7 @@ public class ResultFactory {
     }
 
     /**
-     * 功能描述: 响应结果
+     * 响应结果
      *
      * @param msg 响应信息
      * @return {@link Result}
@@ -84,7 +84,7 @@ public class ResultFactory {
     }
 
     /**
-     * 功能描述: 响应结果
+     * 响应结果
      *
      * @param msg  响应信息
      * @param info 响应描述
@@ -97,7 +97,7 @@ public class ResultFactory {
     }
 
     /**
-     * 功能描述: 响应结果
+     * 响应结果
      *
      * @return {@link Result}
      * @method wrapper

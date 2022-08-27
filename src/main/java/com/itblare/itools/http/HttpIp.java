@@ -34,7 +34,7 @@ public class HttpIp {
     private static final Logger logger = LoggerFactory.getLogger(HttpIp.class);
 
     /**
-     * 功能描述: 获取本地IP地址
+     * 获取本地IP地址
      *
      * @return {@link String}
      * @method getLocalIP
@@ -60,7 +60,7 @@ public class HttpIp {
     }
 
     /**
-     * 功能描述: 确认Ip是否在指定网段内
+     * 确认Ip是否在指定网段内
      * 参考：https://blog.51cto.com/u_6930123/2113151
      *
      * @param ip   IP地址
@@ -99,7 +99,7 @@ public class HttpIp {
     }
 
     /**
-     * 功能描述: 获取用户请求的真实IP地址
+     * 获取用户请求的真实IP地址
      *
      * @param request http????
      * @return {@link String}
@@ -192,7 +192,7 @@ public class HttpIp {
     }
 
     /**
-     * 功能描述: 判断操作系统是否是Windows
+     * 判断操作系统是否是Windows
      *
      * @return {@link boolean}
      * @method isWindowsOS
@@ -208,7 +208,7 @@ public class HttpIp {
     }
 
     /**
-     * 功能描述: 获取Linux下的IP地址
+     * 获取Linux下的IP地址
      *
      * @return {@link String}
      * @method getLinuxLocalIp
@@ -247,7 +247,7 @@ public class HttpIp {
     }
 
     /**
-     * 功能描述: 判定IP地址是否未空值
+     * 判定IP地址是否未空值
      *
      * @param ipAdderss IP地址
      * @return {@link boolean}

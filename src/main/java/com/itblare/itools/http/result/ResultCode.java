@@ -13,7 +13,7 @@ package com.itblare.itools.http.result;
  */
 
 /**
- * 一句话功能简述：结果枚举
+ * 结果枚举
  *
  * @author Blare
  * @create 2021/4/15 17:26

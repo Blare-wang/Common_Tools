@@ -31,7 +31,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * 一句话功能简述：七牛云存储
+ * 七牛云存储
  *
  * @author Blare
  * @create 2021/4/12 18:35

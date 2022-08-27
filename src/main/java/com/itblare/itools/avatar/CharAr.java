@@ -28,7 +28,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 一句话功能简述：字符头像
+ * 字符头像
  *
  * @author Blare
  * @create 2021/4/19 17:57
@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
 public class CharAr {
 
     /**
-     * 功能描述: 获取头像输出到文件
+     * 获取头像输出到文件
      *
      * @param charStr      字符
      * @param file         输出文件
@@ -58,7 +58,7 @@ public class CharAr {
     }
 
     /**
-     * 功能描述: 获取头像输出到文件
+     * 获取头像输出到文件
      *
      * @param charStr 字符
      * @param file    输出文件
@@ -76,7 +76,7 @@ public class CharAr {
     }
 
     /**
-     * 功能描述: 获取头像输出BASE64
+     * 获取头像输出BASE64
      *
      * @param charStr      字符
      * @param width        宽度
@@ -97,7 +97,7 @@ public class CharAr {
     }
 
     /**
-     * 功能描述: 获取头像输出BASE64
+     * 获取头像输出BASE64
      *
      * @param charStr 字符
      * @return {@link String}
@@ -116,7 +116,7 @@ public class CharAr {
     }
 
     /**
-     * 功能描述: 绘制字体头像
+     * 绘制字体头像
      * 如果是英文名，只显示首字母大写
      * 如果是中文名，只显示最后两个字
      *
@@ -210,7 +210,7 @@ public class CharAr {
     }
 
     /**
-     * 功能描述: 判断字符串是否为中文
+     * 判断字符串是否为中文
      *
      * @param charStr 字符
      * @return {@link boolean}
@@ -225,7 +225,7 @@ public class CharAr {
     }
 
     /**
-     * 功能描述: 获得随机颜色
+     * 获得随机颜色
      *
      * @return {@link Color}
      * @method getRandomColor
@@ -256,7 +256,7 @@ public class CharAr {
 
 
     /**
-     * 功能描述: 图片做圆角处理
+     * 图片做圆角处理
      *
      * @param image        图片
      * @param cornerRadius 圆角度

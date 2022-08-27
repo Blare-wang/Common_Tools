@@ -21,7 +21,7 @@ import java.io.OutputStream;
 import static com.itblare.itools.captcha.ImageCapHelper.generateImageCode;
 
 /**
- * 一句话功能简述：图片验证码
+ * 图片验证码
  *
  * @author Blare
  * @create 2021/4/24 18:58
@@ -69,7 +69,7 @@ public class SpecCaptcha extends AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 生成验证码图形
+     * 生成验证码图形
      *
      * @param charArr 验证码
      * @param out     输出流

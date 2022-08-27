@@ -22,7 +22,7 @@ import static com.itblare.itools.captcha.ImageCapHelper.getRandomColor;
 import static com.itblare.itools.captcha.ImageCapHelper.graphicsChineseImage;
 
 /**
- * 一句话功能简述：中文验证码
+ * 中文验证码
  *
  * @author Blare
  * @create 2021/4/24 18:26
@@ -79,7 +79,7 @@ public class ChineseCaptcha extends AbstractChineseCaptcha {
     }
 
     /**
-     * 功能描述: 生成验证码图形
+     * 生成验证码图形
      *
      * @param charArr 验证码的字符数组
      * @param out     输出流

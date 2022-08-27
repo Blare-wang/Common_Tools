@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * 一句话功能简述：字符串转MAP
+ * 字符串转MAP
  *
  * @author Blare
  * @create 2021/4/17 23:42

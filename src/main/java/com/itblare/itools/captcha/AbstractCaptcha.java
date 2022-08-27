@@ -24,7 +24,7 @@ import static com.itblare.itools.captcha.ImageCapHelper.getRandomFont;
 import static com.itblare.itools.randoms.RandomsProcessor.number;
 
 /**
- * 一句话功能简述：验证码抽象类
+ * 验证码抽象类
  *
  * @author Blare
  * @create 2021/4/24 17:05
@@ -55,7 +55,7 @@ public abstract class AbstractCaptcha {
     protected String chars = null; // 当前验证码
 
     /**
-     * 功能描述: 生成随机验证码
+     * 生成随机验证码
      *
      * @return {@link char[]}
      * @method alphas
@@ -66,7 +66,7 @@ public abstract class AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 生成随机验证码
+     * 生成随机验证码
      *
      * @param len 验证码长度
      * @return {@link char[]}
@@ -83,7 +83,7 @@ public abstract class AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 验证码流输出
+     * 验证码流输出
      *
      * @param os 输出流
      * @return {@link boolean}
@@ -93,7 +93,7 @@ public abstract class AbstractCaptcha {
     public abstract boolean out(OutputStream os);
 
     /**
-     * 功能描述: 验证码base64输出
+     * 验证码base64输出
      *
      * @return {@link String}
      * @method toBase64
@@ -102,7 +102,7 @@ public abstract class AbstractCaptcha {
     public abstract String toBase64();
 
     /**
-     * 功能描述: 输出base64编码
+     * 输出base64编码
      *
      * @param type 编码头，eg：data:image/png;base64,
      * @return {@link String}
@@ -116,7 +116,7 @@ public abstract class AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 获取当前的验证码
+     * 获取当前的验证码
      *
      * @return {@link String}
      * @method text
@@ -128,7 +128,7 @@ public abstract class AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 获取当前验证码的字符数组
+     * 获取当前验证码的字符数组
      *
      * @return {@link char[]}
      * @method textChar
@@ -140,7 +140,7 @@ public abstract class AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 检查验证码是否生成，没有则立即生成
+     * 检查验证码是否生成，没有则立即生成
      *
      * @method checkAlpha
      * @date 2021/4/24 17:45
@@ -152,7 +152,7 @@ public abstract class AbstractCaptcha {
     }
 
     /**
-     * 功能描述: 检查验证码是否生成，没有则立即生成
+     * 检查验证码是否生成，没有则立即生成
      *
      * @param length 指定长度
      * @method checkAlpha
@@ -166,7 +166,7 @@ public abstract class AbstractCaptcha {
     }
 
     /**
-     * 功能描述: GIF 生成
+     * GIF 生成
      *
      * @param os       输出流
      * @param besselXY 绘制立方曲线坐标
