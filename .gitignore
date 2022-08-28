@@ -33,3 +33,6 @@ build/
 .vscode/
 /.mvn/
 /logs/
+/src/test/
+/Y
+/Y.pub
